@@ -1,12 +1,20 @@
 package ui;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import models.Book;
 import models.BookCatalog;
+import models.Customer;
 import ui.UI;
-
+import utilities.GenderType;
+ 
 public class Main {
 
 	public static void main(String[] args) {
+		
+
 
 		BookCatalog bookCatalog = new BookCatalog();
 		
@@ -26,6 +34,8 @@ public class Main {
 			System.out.println(foundBook.getTitle());
 		}
 		
+		Customer customer = new Customer("Mr", "Mike", "Will","333 foster","7709695176","@blah.com",3,GenderType.MALE);
+		System.out.println(customer.getExpiryDate());
 	}
 
 }
