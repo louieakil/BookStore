@@ -17,7 +17,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		double d = 1.2345;
-		NumberFormat nf = NumberFormat.getPercentInstance();
+		NumberFormat nf = NumberFormat.getCurrencyInstance(Locale.CANADA_FRENCH);
 		System.out.println(nf.format(d));
 
 		BookCatalog bookCatalog = new BookCatalog();
@@ -40,7 +40,6 @@ public class Main {
 		
 		Customer customer = new Customer("Mr", "Mike", "Will","333 foster","7709695176","@blah.com",3,GenderType.MALE);
 		System.out.println(customer.getExpiryDate());
-		System.out.println(customer.getMailingName());
 	}
 
 }

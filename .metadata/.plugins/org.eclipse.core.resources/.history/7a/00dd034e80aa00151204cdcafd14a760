@@ -38,7 +38,7 @@ public class Main {
 			System.out.println(foundBook.getTitle());
 		}
 		
-		Customer customer = new Customer("Mr", "Mike", "Will","333 foster","7709695176","@blah.com",3,GenderType.MALE);
+		Customer customer = new Customer("Mrs", "Mike", "Will","333 foster","7709695176","@blah.com",3,GenderType.MALE);
 		System.out.println(customer.getExpiryDate());
 		System.out.println(customer.getMailingName());
 	}

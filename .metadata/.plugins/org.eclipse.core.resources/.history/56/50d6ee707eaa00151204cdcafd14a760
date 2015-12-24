@@ -49,18 +49,18 @@ public class Customer {
 		this.surname = surname;
 	}
 	
-	public void setSurname(String surname){
-		this.surname = surname;
-	}
-	
 	public String getMailingName() {
-		StringBuilder sb = new StringBuilder(title);
-		sb.append(" ");
-		sb.append(firstName.substring(0,1));
-		sb.append(" ");
-		sb.append(surname);
+		mailingName = title;
+		mailingName += " ";
+		String initial = firstName.substring(0,1);
+		mailingName += " ";
+		mailingName += surname;
 		
-		return sb.toString();
+		
+		
+		
+		
+		return mailingName;
 	}
 	
 	public GenderType getGender() {

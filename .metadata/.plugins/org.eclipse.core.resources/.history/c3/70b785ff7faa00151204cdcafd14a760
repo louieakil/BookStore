@@ -55,12 +55,17 @@ public class Customer {
 	
 	public String getMailingName() {
 		StringBuilder sb = new StringBuilder(title);
-		sb.append(" ");
-		sb.append(firstName.substring(0,1));
-		sb.append(" ");
-		sb.append(surname);
 		
-		return sb.toString();
+		String mailingName; 
+		
+		
+		mailingName = title;
+		mailingName += " ";
+		String initial = firstName.substring(0,1);
+		mailingName += " ";
+		mailingName += surname;
+		
+		return mailingName;
 	}
 	
 	public GenderType getGender() {

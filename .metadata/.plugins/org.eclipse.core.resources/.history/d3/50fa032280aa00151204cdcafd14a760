@@ -40,7 +40,6 @@ public class Main {
 		
 		Customer customer = new Customer("Mr", "Mike", "Will","333 foster","7709695176","@blah.com",3,GenderType.MALE);
 		System.out.println(customer.getExpiryDate());
-		System.out.println(customer.getMailingName());
 	}
 
 }
