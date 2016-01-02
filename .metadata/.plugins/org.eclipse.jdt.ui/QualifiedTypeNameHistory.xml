@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="models.Customer"/>
+<fullyQualifiedTypeName name="utilities.GenderType"/>
+<fullyQualifiedTypeName name="java.text.NumberFormat"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="models.DVD"/>
+</qualifiedTypeNameHistroy>

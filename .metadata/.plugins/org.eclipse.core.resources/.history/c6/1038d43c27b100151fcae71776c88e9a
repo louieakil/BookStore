@@ -1,0 +1,10 @@
+
+public class Loan {
+	
+	private int id;
+	private String customer;
+	private String book;
+	private int startDate;
+	private int dueDate;
+	
+}

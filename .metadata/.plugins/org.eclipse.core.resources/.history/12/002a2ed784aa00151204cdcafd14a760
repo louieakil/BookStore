@@ -1,0 +1,6 @@
+
+public class Material {
+	private int id;
+	private String title;
+	private String branch;
+}

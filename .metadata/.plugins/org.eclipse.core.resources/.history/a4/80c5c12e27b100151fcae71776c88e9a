@@ -1,0 +1,6 @@
+
+public class Loan {
+	private int id;
+	private String customer;
+	private String book;
+}

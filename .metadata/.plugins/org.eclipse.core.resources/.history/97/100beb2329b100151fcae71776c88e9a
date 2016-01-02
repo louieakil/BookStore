@@ -1,0 +1,27 @@
+import java.util.Date;
+
+import utilities.StatusType;
+
+public class Loan {
+	
+	private int id;
+	private String customer;
+	private String book;
+	private Date startDate;
+	private Date dueDate;
+	private int returnDate;
+	private StatusType status;
+	
+	public Loan(int id, String customer, String book, int startDate, int dueDate, StatusType status) {
+		this.id = id;
+		this.customer = customer;
+		this.book = book;
+		this.startDate = startDate;
+		this.dueDate = dueDate;
+		this.status = status;
+	}
+	
+	
+	
+	
+}

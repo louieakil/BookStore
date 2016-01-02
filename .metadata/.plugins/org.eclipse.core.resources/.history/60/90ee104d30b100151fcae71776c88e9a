@@ -1,0 +1,11 @@
+package models;
+
+public class LoanRegistry {
+	
+	private Loan[] registry;
+	
+	public LoanRegistry(){
+		registry = new Loan[100];
+	}
+	
+}

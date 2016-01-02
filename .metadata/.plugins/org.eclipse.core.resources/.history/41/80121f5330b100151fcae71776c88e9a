@@ -1,0 +1,18 @@
+package models;
+
+public class LoanRegistry {
+	
+	private Loan[] registry;
+	private int nextPosition;
+	
+	public LoanRegistry(){
+		registry = new Loan[100];
+	}
+	
+	
+	public void addLoan(Loan loan) throws LoanExists {
+		
+	}
+	
+	
+}

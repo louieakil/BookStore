@@ -70,4 +70,10 @@ public class Customer {
 	public Date getExpiryDate(){
 		return expiryDate;
 	}
+
+	@Override
+	public String toString() {
+		return getMailingName();
+	}
+	
 }

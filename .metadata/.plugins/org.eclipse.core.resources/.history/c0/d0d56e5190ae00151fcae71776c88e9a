@@ -1,0 +1,25 @@
+
+public class Main {
+	public static void main(String[] args) {
+		int hour, minute;
+		String date, month;
+		int day, year;
+		month = "December";
+		day = 28;
+		date = "Teusday";
+		year =2015;
+	    hour = 11;
+	    minute = 59;
+	    System.out.println(day);
+	    System.out.println(month);
+	    System.out.println(year);
+	    System.out.println(date);
+	    System.out.println(date + ", " + month + day + year);
+	    System.out.print("Number of minutes since midnight: ");
+	    System.out.println(hour*60 + minute);
+	    System.out.print("Fraction of the hour that has passed: ");
+	    System.out.println(minute/60);
+
+	}
+
+}

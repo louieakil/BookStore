@@ -1,0 +1,10 @@
+package models;
+
+public class DVD extends Material {
+	
+	private String director;
+	private String catalogNo;
+	private int runningTime;
+	
+
+}

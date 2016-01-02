@@ -1,0 +1,45 @@
+package models;
+import java.util.Date;
+
+import utilities.StatusType;
+
+public class Loan {
+	
+	private int ID;
+	private Customer customer;
+	private Book book;
+	private Date startDate;
+	private Date dueDate;
+	private Date returnDate;
+	private StatusType status;
+	
+	public Loan(int ID, Customer customer, Book book) {
+		super();
+		this.ID = ID;
+		this.customer = customer;
+		this.book = book;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Loan [ID=" + ID + ", customer=" + customer.getMailingName() + ", book=" + book + "]";
+	}
+
+
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public Book getBook() {
+		return book;
+	}
+
+	public Date getDueDate() {
+		return dueDate;
+	}
+	
+	
+}
