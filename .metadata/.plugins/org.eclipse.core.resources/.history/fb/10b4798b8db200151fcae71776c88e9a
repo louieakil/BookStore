@@ -1,0 +1,28 @@
+package models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import models.Book;
+
+public class BookTest {
+
+	@Test
+	public void test2EqualBooks() {
+		Book book = new Book(0,"","","","",0);
+		
+		assertTrue();
+		
+		
+	}
+
+	@Test
+	public void test2NonEqualBooks() {
+		Book book = new Book(0,"","","","",0);
+		
+		
+		assertFalse();
+		
+	}
+}

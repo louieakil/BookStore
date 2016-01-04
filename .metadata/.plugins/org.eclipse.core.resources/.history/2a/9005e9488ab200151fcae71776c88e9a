@@ -1,0 +1,23 @@
+package models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import models.Book;
+
+public class LoanTest {
+
+	@Test
+	public void testDueDate() {
+		
+		Book book = new Book(0,"","","","",0);
+		Customer customer = new Customer();
+		
+		
+		
+		
+		//fail("Not yet implemented");
+	}
+
+}

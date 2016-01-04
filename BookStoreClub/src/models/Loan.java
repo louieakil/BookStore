@@ -75,7 +75,7 @@ public class Loan {
 	
 	public void endLoan(){
 		returnDate = new Date();
-		status = StatusType.CURRENT;
+		status = StatusType.HISTORIC;
 	}
 	
 	
