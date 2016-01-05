@@ -39,6 +39,10 @@ public class Customer {
 		return firstName;
 	}
 	
+	public String getTitle() {
+		return title;
+	}
+	
 	public String getSurname() {
 		return surname;
 	}

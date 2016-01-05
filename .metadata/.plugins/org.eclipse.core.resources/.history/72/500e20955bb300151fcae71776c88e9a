@@ -1,0 +1,25 @@
+package models;
+
+import java.util.HashMap;
+
+public class CustomerRecords {
+	
+	private HashMap<String, Customer> customerMap;
+	
+	public CustomerRecords(){
+		customerMap = new HashMap<Customer>();
+	}
+	
+	
+	public void addCustomer(Customer newCustomer){
+		customerMap.put(newCustomer.getTitle(), newCustomer);
+	}
+	
+	public Customer findByName(){
+		for(Customer thierName : customerMap.values()){
+			
+		}
+	}
+	
+	
+}

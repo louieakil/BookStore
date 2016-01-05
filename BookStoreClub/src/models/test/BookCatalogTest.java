@@ -15,7 +15,7 @@ public class BookCatalogTest {
 		BookCatalog bc = new BookCatalog();
 		int intialNum = bc.getNumberOfBook();
 		
-		Book book = new Book(1,"","","","",0);
+		Book book = new Book("1","","","","",0);
 		bc.addBook(book);
 		
 		assertTrue(intialNum == bc.getNumberOfBook() - 1);

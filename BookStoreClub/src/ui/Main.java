@@ -28,19 +28,21 @@ public class Main {
 
 		BookCatalog bookCatalog = new BookCatalog();
 		
-		Book book1 = new Book(1,"An intro to realness","Master Lew","12345", "Carroll", 425);
-		Book book2 = new Book(2,"Booming out the 6","Lew Will","23456", "Carroll", 150);
-		DVD dvd1 = new DVD(3,"Film about my life", "By Lew Will", "Carroll Branch","99887", 120);
-		DVD dvd2 = new DVD(3,"Film about my life", "By Lew Will", "Carroll Branch","99887", 120);		
+		Book book1 = new Book("0101","An intro to realness","Master Lew","12345", "Carroll", 425);
+		Book book2 = new Book("1738","Booming out the 6","Lew Will","23456", "Carroll", 150);
+		Book book3 = new Book("X777","Booming like Metro","Lew Will","23456", "Carroll", 250);
+		DVD dvd1 = new DVD("3","Film about my life", "By Lew Will", "Carroll Branch","99887", 120);
+		DVD dvd2 = new DVD("3","Film about my life", "By Lew Will", "Carroll Branch","99887", 120);		
 
 		
 		bookCatalog.addBook(book1);
 		bookCatalog.addBook(book2);
+		bookCatalog.addBook(book3);
 
 
 		UI ui = new UI();
 		ui.printHeader();
-		ui.printBookCatalog(bookCatalog.getBookArray());
+		ui.printBookCatalog(bookCatalog.getBookMap());
 		
 		try 
 		{

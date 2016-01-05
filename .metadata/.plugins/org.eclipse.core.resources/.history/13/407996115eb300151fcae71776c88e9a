@@ -1,0 +1,24 @@
+package models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import models.Customer;
+import models.CustomerRecords;
+import utilities.GenderType;
+
+public class CustomerRecordsTest {
+
+	@Test
+	public void testAddCustomer() {
+		Customer newCustomer = new Customer("Mr", "Matt", "Gleen", "Blahh", "Blahhhblahh", "someMoreBlah", 55822, GenderType.MALE);
+		CustomerRecords records = new CustomerRecords();
+		
+		int intialSize = records.getNumberOfCustomer();
+		
+		records.add
+		
+	}
+
+}

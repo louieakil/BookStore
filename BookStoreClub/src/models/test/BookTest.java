@@ -10,8 +10,8 @@ public class BookTest {
 
 	@Test
 	public void test2EqualBooks() {
-		Book book = new Book(0,"","","","",0);
-		Book book1 = new Book(0,"","","","",0);
+		Book book = new Book("","","","","",0);
+		Book book1 = new Book("","","","","",0);
 		
 		assertTrue(book.equals(book1));
 		
@@ -20,8 +20,8 @@ public class BookTest {
 
 	@Test
 	public void test2NonEqualBooks() {
-		Book book = new Book(0,"","","","",0);
-		Book book2 = new Book(011,"","","","",0);
+		Book book = new Book("","","","","",0);
+		Book book2 = new Book("000","","","","",0);
 		
 		assertFalse(book.equals(book2));
 		

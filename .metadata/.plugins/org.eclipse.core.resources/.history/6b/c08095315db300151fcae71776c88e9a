@@ -1,0 +1,16 @@
+package models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import models.Customer;
+
+public class CustomerRecordsTest {
+
+	@Test
+	public void testAddCustomer() {
+		Customer newCustomer = new Customer("Mr", "Matt", "Gleen", "Blahh", "Blahhhblahh", "someMoreBlah", 55822, "150");
+	}
+
+}

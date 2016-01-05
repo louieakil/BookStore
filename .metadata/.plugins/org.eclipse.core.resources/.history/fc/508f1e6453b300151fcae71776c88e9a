@@ -1,0 +1,42 @@
+package models;
+
+import java.util.HashMap;
+
+public class BookCatalog {
+	
+	private HashMap<Integer, Book> bookMap;
+
+	private int nextPosition = 0;
+
+	public HashMap<Integer, Book> getBookMap() {
+		return bookMap;
+	}
+	
+	public int getNumberOfBook(){
+		return bookMap.size();
+	}
+	
+	public void addBook(Book newBook) {
+		bookMap.put(newBook.getID(),  newBook);
+	}
+	
+	public Book findBook(String title) throws BookNotFoundException
+	{
+		title = title.trim();
+		
+		for (Book nextBook : bookMap.values())
+		{
+			if (nextBook.getTitle().equalsIgnoreCase((title.trim()))) {
+				return nextBook;
+			}
+		}
+		
+		for (int counter = 0; counter < nextPosition; counter++) {
+			if (bookArray[counter].getTitle().equalsIgnoreCase((title.trim()))) {
+				return bookArray[counter];
+			}
+		}
+		throw new BookNotFoundException();
+	}
+
+}

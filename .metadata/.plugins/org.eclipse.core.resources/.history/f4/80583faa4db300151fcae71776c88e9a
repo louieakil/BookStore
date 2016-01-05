@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class ImprovingArrays {
+
+	public static void main(String[] args) {
+
+		ArrayList<String> myAL = new ArrayList<String>();
+		HashSet<String> myHS = new HashSet<String>();
+		
+		
+		
+		myAL.add("first item");
+		myAL.add("Second item");
+		myAL.add("third item");
+		myAL.add("fourth item");
+		
+		myHS.add("first item");
+		myHS.add("Second item");
+		myHS.add("third item");
+		myHS.add("fourth item");
+		
+		myHS.remove("Second item");
+		myAL.remove(1);
+		myAL.add(0, "Fifth item");
+		
+		for (int i = 0; i < myAL.size(); i++){
+			System.out.println(myAL.get(i));
+		}
+		
+		for (int i = 0; i < myHS.size(); i++){
+			System.out.println(myHS.get(i));
+		}
+	}
+
+}

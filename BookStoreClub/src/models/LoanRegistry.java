@@ -1,40 +1,35 @@
 package models;
 
+import java.util.ArrayList;
+
 import utilities.StatusType;
 
 public class LoanRegistry {
 	
-	private Loan[] registry;
-	private int nextPosition;
+	private ArrayList<Loan> registry;
 	
 	public LoanRegistry(){
-		registry = new Loan[100];
-		nextPosition = 0;
+		registry = new ArrayList <Loan>();
 	}
 	
 	
 	public void addLoan(Loan loan) throws LoanExists {
 		
-		for (int i = 0; i < nextPosition; i++)
+		if(registry.contains(loan))
 		{
-			if (registry[i].equals(loan))
-			{
-				throw new LoanExists();
-			}
+			throw new LoanExists();
 		}
-		
-		registry[nextPosition] = loan;
-		nextPosition++;
-		
+		registry.add(loan);
 	}
 	
-	public Loan findLoan(int bookID) throws LoanNotFound {
+	public Loan findLoan(String bookID) throws LoanNotFound {
 		
-		for (int i = 0; i < nextPosition; i++)
+		
+		for (Loan loan : registry)
 		{
-			if (registry[i].getBook().getID() == bookID && registry[i].getStatus() == StatusType.CURRENT)
+			if (loan.getBook().getID().equals(bookID) && loan.getStatus() == StatusType.CURRENT)
 			{
-				return registry[i];
+				return loan;
 			}
 		}
 		
@@ -42,7 +37,7 @@ public class LoanRegistry {
 		
 	}
 	
-	public boolean isBookOnLoan(int bookID)
+	public boolean isBookOnLoan(String bookID)
 	{
 		try {
 			Loan foundLoan = findLoan(bookID);

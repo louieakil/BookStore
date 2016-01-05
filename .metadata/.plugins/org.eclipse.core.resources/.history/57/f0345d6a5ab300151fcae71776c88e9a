@@ -1,0 +1,10 @@
+package models;
+
+import java.util.HashMap;
+
+public class CustomerRecords {
+	private HashMap<String, Customer> customerMap;
+	
+	
+	
+}

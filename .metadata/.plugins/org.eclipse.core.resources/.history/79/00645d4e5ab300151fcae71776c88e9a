@@ -1,0 +1,7 @@
+package models;
+
+public class CustomerRecords {
+	private HashMap<String, Customer> customerMap;
+	
+	
+}
