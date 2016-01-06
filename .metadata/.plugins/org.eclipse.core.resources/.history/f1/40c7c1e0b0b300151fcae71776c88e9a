@@ -1,0 +1,16 @@
+
+public class BottlesFoBeer {
+	
+	
+	public static int onTheWall(int bottles){
+		
+		System.out.println("test");
+		return bottles;
+	}
+
+	public static void main(String[] args) {
+	onTheWall(14);
+		
+	}
+
+}

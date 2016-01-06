@@ -1,0 +1,10 @@
+import models.MaterialCatalog;
+
+public class MaterialTest {
+
+	public static void main(String[] args) {
+		MaterialCatalog test1 = new MaterialCatalog();
+
+	}
+
+}

@@ -1,0 +1,24 @@
+import java.util.TreeMap;
+
+import models.Book;
+import models.DVD;
+import models.Material;
+import models.MaterialCatalog;
+
+public class MaterialTest {
+
+	public static void main(String[] args) {
+		MaterialCatalog test1 = new MaterialCatalog();
+		Book book1 = new Book("bl", "", "", "", "blah", 100);
+		DVD dvd1 = new DVD("gang", "", "", "blah", "bhhh", 120);
+		test1.addMaterial(book1);
+		test1.addMaterial(dvd1);
+		
+		TreeMap<String,Material> myMap = test1.getMap();
+		
+		for (Material nextItem : myMap.values()){
+			System.out.println(nextItem.getTitle());
+		}
+	}
+
+}

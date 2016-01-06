@@ -1,0 +1,14 @@
+import models.Book;
+import models.MaterialCatalog;
+
+public class MaterialTest {
+
+	public static void main(String[] args) {
+		MaterialCatalog test1 = new MaterialCatalog();
+		Book book1 = new Book("", "", "", "", "blah", 100);
+		test1.addBook(book1);
+		
+		System.out.println(test1);
+	}
+
+}

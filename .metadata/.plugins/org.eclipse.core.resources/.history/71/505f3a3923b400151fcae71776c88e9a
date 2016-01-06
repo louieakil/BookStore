@@ -1,0 +1,8 @@
+package models;
+
+public class MaterialCatalog {
+
+	private TreeMap<String, Material> materialMap;
+	
+	
+}

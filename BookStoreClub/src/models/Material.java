@@ -35,6 +35,13 @@ public abstract class Material {
 	}
 	
 	@Override
+	public String toString(){
+		return id + " : " + title;
+	}
+	
+	
+	
+	@Override
 	public boolean equals(Object obj){
 		if (obj == null){
 			return false;

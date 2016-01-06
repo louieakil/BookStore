@@ -1,0 +1,13 @@
+package models;
+
+import java.util.TreeMap;
+
+public class MaterialCatalog {
+
+	private TreeMap<String, Material> materialMap;
+	
+	public MaterialCatalog() {
+		materialMap = new TreeMap<String, Material>();
+	}
+	
+}
