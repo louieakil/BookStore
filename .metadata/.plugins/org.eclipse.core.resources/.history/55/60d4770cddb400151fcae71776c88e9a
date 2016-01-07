@@ -26,6 +26,7 @@ public class Main {
 		NumberFormat nf = NumberFormat.getPercentInstance();
 		System.out.println(nf.format(d));
 
+		MaterialCatalogInterface mci = new MaterialCatalogMemoryVersion();
 		MaterialCatalogInterface materialCatalog = new MaterialCatalogMemoryVersion();
 		
 		Book book1 = new Book("0101","An intro to realness","Master Lew","12345", "Carroll", 425);
