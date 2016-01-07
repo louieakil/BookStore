@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class DataBaseConnectionTesting {
 
 	public static void main(String[] args) {
-		ChangeData("Update Materials set title = ? where id = ?", "A second test", 1);
+		ChangeData("Update Materials set title = ? where id = ?", "A second tesr", 1);
 		RetrieveResultSet("Select * from Materials");
 
 	}

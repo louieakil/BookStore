@@ -2,7 +2,6 @@ package ui;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,17 +11,18 @@ import java.sql.Statement;
 public class DataBaseConnectionTesting {
 
 	public static void main(String[] args) {
-		ChangeData("Update Materials set title = ? where id = ?", "A second test", 1);
+		ChangeData("Update Materials set title = 'Test title' where id = 1");
 		RetrieveResultSet("Select * from Materials");
 
 	}
 	
 	
 	
-	public static void ChangeData(String sql, String title, int id)
+	public static void ChangeData(String sql)
 	{
 		Connection con = null;
-		PreparedStatement stm = null;
+		Statement stm = null;
+		ResultSet rs = null;
 		
 		try {
 
@@ -30,20 +30,22 @@ public class DataBaseConnectionTesting {
 			{
 				Class.forName("org.apache.derby.jdbc.ClientDriver");
 				con = DriverManager.getConnection("jdbc:derby://localhost/library");
-				stm = con.prepareStatement(sql);
-				stm.setString(1, title);
-				stm.setInt(2, id);
-				int results = stm.executeUpdate();
-				
-				System.out.println("Records amended: " + results);
+				stm = con.createStatement();
+				rs = stm.executeQuery("Select * from materials");
 				//Result set output
+				while (rs.next())
+				{
+					System.out.println(rs.getString("title"));
+				}
 			}
 			finally
 			{
+				if(rs != null) rs.close();
 				if(stm !=null) stm.close();
 				if(con != null)con.close();
 				{
 					con.close();
+					System.out.println("Connection was closed");
 				}
 
 			}
