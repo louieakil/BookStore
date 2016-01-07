@@ -1,3 +1,16 @@
 INDEX VERSION 1.127+/Users/lewisscales/source/BookStore/.metadata/.plugins/org.eclipse.jdt.core
-401358203.index
+2714604476.index
+1508914297.index
+2711738220.index
+3753349145.index
+718533545.index
+2885558025.index
+2307273637.index
+3424827874.index
+2345028593.index
+312481032.index
+441814130.index
+624369091.index
+697002508.index
 1672755129.index
+401358203.index
