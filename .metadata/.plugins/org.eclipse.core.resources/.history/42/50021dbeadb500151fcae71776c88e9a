@@ -13,7 +13,6 @@ import models.Loan;
 import models.LoanExists;
 import models.LoanRegistry;
 import models.Material;
-import models.MaterialCatalogDatabaseVersion;
 import models.MaterialCatalogInterface;
 import models.MaterialCatalogMemoryVersion;
 import ui.UI;

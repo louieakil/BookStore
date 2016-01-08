@@ -1,7 +1,5 @@
 package models;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.TreeMap;
 
 
@@ -11,19 +9,18 @@ public class MaterialCatalogDatabaseVersion implements MaterialCatalogInterface 
 	@Override
 	public void addMaterial(Material newMaterial) {
 
-		Connection con = null;
 		PreparedStatement stm = null;
 		
-			if (newMaterial instanceof Book)
-			{
-				Book newBook = (Book)newMaterial;
-				//do itttttt
-			}
-			else if (newMaterial instanceof DVD)
-			{
-				DVD newDVD = (DVD)newMaterial;
-				//do itttttttt
-			}
+		if (newMaterial instanceof Book)
+		{
+			Book newBook = (Book)newMaterial;
+			//do itttttt
+		}
+		else if (newMaterial onstanceof DVD)
+		{
+			DVD newDVD = (DVD)newMaterial;
+			//do itttttttt
+		}
 		
 		///execute
 	}
