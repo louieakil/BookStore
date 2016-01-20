@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="BookTest" project="BookStoreClub" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="models.test.BookTest" time="0.013">
-    <testcase name="test2NonEqualBooks" classname="models.test.BookTest" time="0.011"/>
-    <testcase name="test2EqualBooks" classname="models.test.BookTest" time="0.002"/>
-  </testsuite>
-</testrun>

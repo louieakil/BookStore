@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
-<fullyQualifiedTypeName name="models.Customer"/>
-<fullyQualifiedTypeName name="utilities.GenderType"/>
 <fullyQualifiedTypeName name="java.text.NumberFormat"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="models.BookNotFoundException"/>
+<fullyQualifiedTypeName name="utilities.StatusType"/>
+<fullyQualifiedTypeName name="models.LoanRegistry"/>
+<fullyQualifiedTypeName name="models.LoanExists"/>
+<fullyQualifiedTypeName name="models.Loan"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="models.BookCatalog"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="models.Customer"/>
+<fullyQualifiedTypeName name="utilities.GenderType"/>
+<fullyQualifiedTypeName name="models.CustomerRecords"/>
+<fullyQualifiedTypeName name="models.Book"/>
 <fullyQualifiedTypeName name="models.DVD"/>
+<fullyQualifiedTypeName name="models.Material"/>
+<fullyQualifiedTypeName name="models.MaterialCatalog"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="models.MaterialCatalogInterface"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="org.apache.derby.client.am.Connection"/>
+<fullyQualifiedTypeName name="java.beans.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="models.MaterialCatalogDatabaseVersion"/>
+<fullyQualifiedTypeName name="org.apache.derby.client.am.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
 </qualifiedTypeNameHistroy>
