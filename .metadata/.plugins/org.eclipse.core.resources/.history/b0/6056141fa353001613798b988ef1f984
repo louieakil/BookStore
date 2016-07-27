@@ -16,7 +16,7 @@ public class Main {
 		ui.printBookCatalog(bookCatalog.getBookArray());
 		
 		Book foundBook = bookCatalog.findBook("Intro to Java");
-		System.out.println(foundBook.getTitle());
+		System.out.println(foundBook);
 	}
 	
 	

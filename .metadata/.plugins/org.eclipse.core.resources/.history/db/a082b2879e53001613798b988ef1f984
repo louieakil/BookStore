@@ -1,0 +1,19 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Book[] bookCatalog = new Book[10];
+		
+		Book book1 = new Book(1, "Intro to Java", "Matty Ice", "232423");
+		Book book2 = new Book(2, "Intro to Java", "Matty Ice", "232423");
+		bookCatalog[0] = book1;
+		bookCatalog[1] = book2;
+		
+		UI ui = new UI();
+		ui.printHeader();
+		
+	}
+	
+	
+}

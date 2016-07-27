@@ -1,0 +1,30 @@
+
+public class BookCatalog {
+
+	private Book[] bookArray = new Book[100];
+	private int nextPos = 0;
+	
+	
+	public Book[] getBookArray(){
+		return bookArray;
+	}
+	
+	public void addBook(Book newBook){
+		bookArray[nextPos] = newBook;
+		nextPos++;
+	}
+	
+	public Book findBook(String title){
+		for(int i = 0; i <= bookArray.length; i++){
+			if(bookArray[i].getTitle() == title){
+				return bookArray[i];
+			}
+				return null;
+		}
+		
+		
+		
+		return null;
+	}
+	
+}

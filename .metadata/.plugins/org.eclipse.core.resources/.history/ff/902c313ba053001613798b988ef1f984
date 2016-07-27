@@ -1,0 +1,11 @@
+
+public class BookCatalog {
+
+	private Book[] bookArray = new Book[100];
+	
+	public Book[] getBookArray(){
+		return bookArray;
+	}
+	
+	
+}

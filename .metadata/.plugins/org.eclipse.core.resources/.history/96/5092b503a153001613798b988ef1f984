@@ -1,0 +1,17 @@
+
+public class BookCatalog {
+
+	private Book[] bookArray = new Book[100];
+	private int nextPos = 0;
+	
+	
+	public Book[] getBookArray(){
+		return bookArray;
+	}
+	
+	public void addBook(Book newBook){
+		bookArray[nextPos] = newBook;
+		nextPos++;
+	}
+	
+}
