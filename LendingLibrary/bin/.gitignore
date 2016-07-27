@@ -1,6 +1,4 @@
-/Book.class
-/Customer.class
-/Gender.class
-/Main.class
-/UI.class
-/BookCatalog.class
+/Models/
+/UI/
+/Utilities/
+/lendinglibrary/
