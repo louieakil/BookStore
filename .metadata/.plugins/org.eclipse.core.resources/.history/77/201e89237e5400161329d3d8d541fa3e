@@ -10,6 +10,11 @@ import lendinglibrary.models.BookCatalog;
 public class Main {
 
 	public static void main(String[] args) {
+			
+		double d = 1.2345;
+		NumberFormat nf = NumberFormat.getCurrencyInstance();
+		
+		System.out.println(nf.format(d));
 		
 		BookCatalog bookCatalog = new BookCatalog();
 		

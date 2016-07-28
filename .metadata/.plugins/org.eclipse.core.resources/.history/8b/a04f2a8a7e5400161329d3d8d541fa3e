@@ -5,9 +5,10 @@ import lendinglibrary.models.Book;
 
 public class UI {
 	
-	public String getPrice(double price){
+	private double d;
+	public double getPrice(double d){
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		return nf.format(price);
+		
 	}
 	
 	public void printHeader(){

@@ -1,14 +1,7 @@
 package lendinglibrary.ui;
-import java.text.NumberFormat;
-
 import lendinglibrary.models.Book;
 
 public class UI {
-	
-	public String getPrice(double price){
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		return nf.format(price);
-	}
 	
 	public void printHeader(){
 		System.out.println("Book ID     Title                  Author");
