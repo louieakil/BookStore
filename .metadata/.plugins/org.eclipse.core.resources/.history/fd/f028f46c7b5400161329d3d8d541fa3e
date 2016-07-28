@@ -10,7 +10,12 @@ import lendinglibrary.models.BookCatalog;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
+		Date today = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		GregorianCalendar gCal = new GregorianCalendar();
+		
+		today = gCal.getTime();
 		
 		double d = 1.2345;
 		NumberFormat nf = NumberFormat.getCurrencyInstance();

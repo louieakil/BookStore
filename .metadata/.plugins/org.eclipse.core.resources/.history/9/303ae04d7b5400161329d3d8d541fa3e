@@ -1,5 +1,4 @@
 package lendinglibrary.ui;
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -10,12 +9,14 @@ import lendinglibrary.models.BookCatalog;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
+		Date today = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		GregorianCalendar gCal = new GregorianCalendar();
+		
+		today = gCal.getTime();
 		
 		double d = 1.2345;
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		
-		System.out.println(nf.format(d));
 		
 //		BookCatalog bookCatalog = new BookCatalog();
 //		
