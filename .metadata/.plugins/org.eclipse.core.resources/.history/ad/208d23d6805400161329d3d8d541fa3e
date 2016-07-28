@@ -1,4 +1,5 @@
 package lendinglibrary.models;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -50,11 +51,12 @@ public class Customer {
 	public String getMailingName(){
 		StringBuilder sb = new StringBuilder(title);
 		sb.append(" ");
-		sb.append(firstName.substring(0, 1));
-		sb.append(" ");
-		sb.append(surname);
-	
-		return sb.toString();
+		sb.append(c)
+		
+		String mailingName;
+		mailingName = title + " " + firstName.getFirstName().substring(0, 1) 
+				+ " " + this.getSurname();	
+		return mailingName;
 	}
 	
 	public Date getExpireDate(){

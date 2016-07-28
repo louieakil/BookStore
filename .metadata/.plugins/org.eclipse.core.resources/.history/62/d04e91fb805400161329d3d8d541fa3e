@@ -1,4 +1,9 @@
 package lendinglibrary.ui;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import lendinglibrary.models.Book;
 import lendinglibrary.models.BookCatalog;
 
@@ -19,6 +24,7 @@ public class Main {
 		Book foundBook = bookCatalog.findBook("Intro to Java");
 		
 		System.out.println(foundBook.getTitle());
+		System.out.println(x);
 	}
 	
 	
