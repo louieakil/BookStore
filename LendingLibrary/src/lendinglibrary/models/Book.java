@@ -1,26 +1,18 @@
 package lendinglibrary.models;
 
-public class Book {
+public class Book extends Material {
 
-	private String title;
 	private String author;
-	private int bookID;
 	private String isbn;
+	private int noOfPages;
 	
-	public Book(int bookID, String title, String author, String isbn){
-		this.bookID = bookID;
-		this.title =title;
+	public Book(int bookID, String title, String author, String isbn, String branch, int noOfPages){
+		super(bookID, title, branch);
 		this.author = author;
 		this.isbn = isbn;
+		this.noOfPages = noOfPages;
 	}
 
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
 
 	public String getAuthor() {
 		return author;
@@ -30,19 +22,12 @@ public class Book {
 		this.author = author;
 	}
 
-	public int getBookID() {
-		return bookID;
-	}
-
-	public void setBookID(int bookID) {
-		this.bookID = bookID;
-	}
-
 	public String getIsbn() {
 		return isbn;
 	}
-
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+	
+	public void sendForRepair(){
+		System.out.println("sent to be fixed");
 	}
+
 }

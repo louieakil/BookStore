@@ -1,0 +1,12 @@
+package lendinglibrary.models;
+
+public class DVD extends Material{
+	
+	private int blah;
+
+	public DVD(int id, String title, String branch) {
+		super(id, title, branch);
+		
+	}
+
+}

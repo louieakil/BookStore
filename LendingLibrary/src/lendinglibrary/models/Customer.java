@@ -19,7 +19,7 @@ public class Customer {
 	
 	
 	public Customer(String title, String firstName, String surname, String address, String phoneNumber, String email, Gender sex){
-		System.out.println("New customer"+" "+ getFirstName() + "created");
+		System.out.println("New customer"+ " "+ getFirstName() + " "+ "created");
 		setName(title,firstName,surname);
 		this.address = address;
 		this.phoneNumber = phoneNumber;
