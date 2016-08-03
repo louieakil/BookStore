@@ -28,7 +28,7 @@ public class Main {
 		ui.printBookCatalog(bookCatalog.getBookArray());
 		
 		try{
-			Book foundBook = bookCatalog.findBook("I Java");
+			Book foundBook = bookCatalog.findBook("Intro to Java");
 			System.out.println(foundBook.getTitle());
 		}
 		catch(BookNotFoundException e){

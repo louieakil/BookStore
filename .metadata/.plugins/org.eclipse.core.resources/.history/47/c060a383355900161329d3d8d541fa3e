@@ -21,7 +21,7 @@ public class BookCatalog {
 				return bookArray[i];
 			}
 		}
-		throw new BookNotFoundException();
+		return null;
 	}
 	
 }

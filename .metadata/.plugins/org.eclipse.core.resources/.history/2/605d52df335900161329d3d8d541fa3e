@@ -15,13 +15,14 @@ public class BookCatalog {
 		nextPos++;
 	}
 	
-	public Book findBook(String title) throws BookNotFoundException{
-		for(int i = 0; i < nextPos; i++){
+	public Book findBook(String title){
+		for(int i = 0; i <= nextPos; i++){
 			if(bookArray[i].getTitle().equalsIgnoreCase(title)){
+				//System.out.println( bookArray[i].getTitle());
 				return bookArray[i];
 			}
 		}
-		throw new BookNotFoundException();
+		return null;
 	}
 	
 }

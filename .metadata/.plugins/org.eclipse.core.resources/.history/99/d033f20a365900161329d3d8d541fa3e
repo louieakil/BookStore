@@ -28,15 +28,14 @@ public class Main {
 		ui.printBookCatalog(bookCatalog.getBookArray());
 		
 		try{
-			Book foundBook = bookCatalog.findBook("I Java");
-			System.out.println(foundBook.getTitle());
+			Book foundBook = bookCatalog.findBook("Intro to Java");
 		}
 		catch(BookNotFoundException e){
 			System.out.println("not found book");
 		}
 		
 		Customer customer1 = new Customer("Ms", "Jacskon", "Sorry", "grove street", "7709695122", "mailer@mail.com", Gender.F);
-
+		System.out.println(foundBook.getTitle());
 		System.out.println(dvd1.lend(customer1));
 		dvd1.license();
 		System.out.println(dvd1.lend(customer1));
