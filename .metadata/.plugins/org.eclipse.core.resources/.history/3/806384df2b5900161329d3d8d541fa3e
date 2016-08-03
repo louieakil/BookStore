@@ -7,7 +7,6 @@ public class DVD extends Material{
 	private int runningTime;
 	private boolean licensed;
 
-
 	public DVD(int id, String title, String branch, String director, String catalogNo, int runningTime) {
 		super(id, title, branch);
 		this.director = director;
@@ -21,18 +20,12 @@ public class DVD extends Material{
 	}
 	
 	public boolean lend(Customer customer){
-		if(licensed){
-			return super.lend(customer);
+		if(licensed == true){
+			return true;
 		}
 		else{
 			return false;
 		}
-		
-	}
-	
-	@Override
-	public int getLoanPeriod() {
-		return 7;
 	}
 	
 }

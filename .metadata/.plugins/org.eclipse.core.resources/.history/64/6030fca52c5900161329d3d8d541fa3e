@@ -1,6 +1,6 @@
 package lendinglibrary.models;
 
-public abstract class Material {
+public class Material {
 
 	private int id;
 	private String title;
@@ -30,14 +30,9 @@ public abstract class Material {
 			borrower = customer;
 			return true;
 		}
-		else {
-			return false;
-		}
+		else return false
 		
 	}
-	
-	//must be overridden
-	public abstract int getLoanPeriod();
 	
 	
 }

@@ -30,10 +30,7 @@ public class Main {
 		System.out.println(foundBook.getTitle());
 		System.out.println(dvd1.lend(customer1));
 		dvd1.license();
-		System.out.println(dvd1.lend(customer1));
-		System.out.println(dvd1.lend(customer1));
-		System.out.println(dvd1.getLoanPeriod());
-		
+		System.out.println(dvd1.getTitle());
 		
 		
 	}

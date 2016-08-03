@@ -36,8 +36,9 @@ public abstract class Material {
 		
 	}
 	
-	//must be overridden
-	public abstract int getLoanPeriod();
+	public abstract int getLoanPeriod(){
+		
+	}
 	
 	
 }

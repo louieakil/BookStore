@@ -22,17 +22,12 @@ public class DVD extends Material{
 	
 	public boolean lend(Customer customer){
 		if(licensed){
-			return super.lend(customer);
+			return true;
 		}
 		else{
 			return false;
 		}
 		
-	}
-	
-	@Override
-	public int getLoanPeriod() {
-		return 7;
 	}
 	
 }

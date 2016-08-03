@@ -30,9 +30,4 @@ public class DVD extends Material{
 		
 	}
 	
-	@Override
-	public int getLoanPeriod() {
-		return 7;
-	}
-	
 }

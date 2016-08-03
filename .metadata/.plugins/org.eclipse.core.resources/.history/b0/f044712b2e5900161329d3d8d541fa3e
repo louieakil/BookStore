@@ -32,7 +32,6 @@ public class Main {
 		dvd1.license();
 		System.out.println(dvd1.lend(customer1));
 		System.out.println(dvd1.lend(customer1));
-		System.out.println(dvd1.getLoanPeriod());
 		
 		
 		

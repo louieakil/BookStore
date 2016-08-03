@@ -30,12 +30,4 @@ public class Book extends Material {
 		System.out.println("sent to be fixed");
 	}
 
-
-	@Override
-	public int getLoanPeriod() {
-		return 21;
-	}
-	
-	
-
 }
