@@ -35,5 +35,4 @@ public class DVD extends Material{
 		return 7;
 	}
 	
-	
 }

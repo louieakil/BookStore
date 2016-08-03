@@ -46,19 +46,8 @@ public abstract class Material {
 	
 	@Override
 	public boolean equals(Object obj){
-		
-		if(obj == null){
-			return false;
-		}
-		
 		if (getClass() == obj.getClass()) {
 			Material otherClass = (Material)obj;
-			if(id == otherClass.id){
-				return true;
-			}
-			else{
-				return false;
-			}
 		}
 		else{
 			return false;
