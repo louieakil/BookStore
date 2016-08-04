@@ -1,0 +1,24 @@
+package lendinglibrary.models;
+
+public class LoanRegistry {
+
+	private Loan[] registry;
+	private int nextPos = 0;
+	
+	public LoanRegistry(){
+		registry = new Loan[100];
+	}
+	
+	public void addLoan(Loan loan) throws BookNotFoundException{
+		
+		if(registry[nextPos] != loan){
+			registry[nextPos] = loan;
+			nextPos++;
+		}
+		else{
+			throw new BookNotFoundException();
+		}
+		
+	}
+	
+}

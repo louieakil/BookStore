@@ -99,7 +99,6 @@ public class Loan {
 //	}
 	
 	public void endLoan(){
-		this.returnDate = new Date();
 		this.status = BookStatus.HISTORIC;	
 	}
 	

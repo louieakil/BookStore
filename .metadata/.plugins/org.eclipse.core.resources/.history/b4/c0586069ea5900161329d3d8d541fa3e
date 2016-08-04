@@ -1,0 +1,38 @@
+package lendinglibrary.models;
+
+import lendinglibrary.util.BookStatus;
+
+public class LoanRegistry {
+
+	private Loan[] registry;
+	private int nextPos = 0;
+	
+	public LoanRegistry(){
+		registry = new Loan[100];
+	}
+	
+	public void addLoan(Loan loan) throws LoanNotFoundException{
+		
+		if(registry[nextPos] != loan){
+			registry[nextPos] = loan;
+			nextPos++;
+		}
+		else{
+			throw new LoanNotFoundException();
+		}
+		
+	}
+	
+	public Loan findLoan(Book bookId){ throws LoanNotFoundException
+		int i;
+		for(i = 0; i <= registry.length; i++){
+			if(bookId.getID() == registry[i].getId()){
+				if(registry[i].getStatus().equals(BookStatus.CURRENT)){
+					return registry[i];
+				}
+			}
+		}
+		throw new LoanNotFoundException();
+	}
+	
+}

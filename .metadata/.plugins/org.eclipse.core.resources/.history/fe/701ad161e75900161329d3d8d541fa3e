@@ -1,0 +1,5 @@
+package lendinglibrary.models;
+
+public class LoanRegistry {
+
+}

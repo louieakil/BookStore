@@ -1,0 +1,11 @@
+package lendinglibrary.models;
+
+public class LoanRegistry {
+
+	private Loan[] registry = new Loan[100];
+	
+	public LoanRegistry(){
+		
+	}
+	
+}

@@ -1,0 +1,20 @@
+package lendinglibrary.models;
+
+public class LoanRegistry {
+
+	private Loan[] registry;
+	private int nextPos = 0;
+	
+	public LoanRegistry(){
+		registry = new Loan[100];
+	}
+	
+	public void addLoan(Loan loan){
+		
+		if(loan){
+			registry[nextPos] = loan;
+			nextPos++;
+		}
+	}
+	
+}
