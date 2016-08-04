@@ -56,14 +56,12 @@ public class Main {
 		
 		LoanRegistry newReg = new LoanRegistry();
 		try {
-			System.out.println("add Loan Worked");
 			newReg.addLoan(test);
 		} catch (LoanAlreadyExistsException e) {
 			System.out.println("add Loan failed");
 			e.printStackTrace();
 		}
 		
-		System.out.println(test.getBookBorrowed().getID());
 		System.out.println(newReg.isBookOnLoan(book1.getID()));
 		test.endLoan();
 		System.out.println(newReg.isBookOnLoan(book1.getID()));

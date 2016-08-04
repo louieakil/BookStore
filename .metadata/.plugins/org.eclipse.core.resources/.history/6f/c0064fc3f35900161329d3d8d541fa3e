@@ -63,7 +63,7 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		System.out.println(test.getBookBorrowed().getID());
+		test.getId();
 		System.out.println(newReg.isBookOnLoan(book1.getID()));
 		test.endLoan();
 		System.out.println(newReg.isBookOnLoan(book1.getID()));

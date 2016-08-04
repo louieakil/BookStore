@@ -20,26 +20,28 @@ public class LoanRegistry {
 			}
 		}
 		registry[nextPos] = loan;
-		nextPos++;	
+		nextPos++;
+		
+		
 	}
 	
 	public Loan findLoan(int bookId) throws LoanNotFoundException{ 
-		for(int i = 0; i < nextPos; i++){
-			if(bookId == registry[i].getBookBorrowed().getID() && registry[i].getStatus().equals(BookStatus.CURRENT)){
+		for(int i = 0; i <= registry.length; i++){
+			if(bookId.getID() == registry[i].getId() && registry[i].getStatus().equals(BookStatus.CURRENT)){
 				return registry[i];
 			}
 		}
 		throw new LoanNotFoundException();
 	}
 	
-	public boolean isBookOnLoan(int bookiD){
-		try{
-			Loan foundLoan = findLoan(bookiD);
-			return true;
+	public boolean isBookOnLoan(Book book){
+		for(int i = 0; i <= registry.length; i++){
+			if(book.getID() == registry[i].getId() && registry[i].getStatus().equals(BookStatus.CURRENT)){
+				return true;
+			}
 		}
-		catch(LoanNotFoundException e){
-			return false;
-		}
+		return false;
+		
 	}
 	
 }
