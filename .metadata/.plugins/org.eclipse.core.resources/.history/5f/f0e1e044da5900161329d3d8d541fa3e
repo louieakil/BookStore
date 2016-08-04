@@ -1,0 +1,7 @@
+package lendinglibrary.models;
+
+public class Loan {
+
+	private int id;
+	private Customer borrower;
+}

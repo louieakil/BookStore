@@ -1,0 +1,12 @@
+package lendinglibrary.models;
+
+import java.util.Date;
+
+public class Loan {
+
+	private int id;
+	private Customer borrower;
+	private Book bookBorrowed;
+	private Date startDate;
+	
+}

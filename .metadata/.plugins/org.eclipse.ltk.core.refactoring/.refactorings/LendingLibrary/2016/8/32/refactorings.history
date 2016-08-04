@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;borrower&apos; in &apos;lendinglibrary.models.Loan&apos; to &apos;customer&apos;&#x0A;- Original project: &apos;LendingLibrary&apos;&#x0A;- Original element: &apos;lendinglibrary.models.Loan.borrower&apos;&#x0A;- Renamed element: &apos;lendinglibrary.models.Loan.customer&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;borrower&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;lendinglibrary.models{Loan.java[Loan^borrower" name="customer" references="true" setter="false" stamp="1470275680659" textual="false" version="1.0"/>
+</session>

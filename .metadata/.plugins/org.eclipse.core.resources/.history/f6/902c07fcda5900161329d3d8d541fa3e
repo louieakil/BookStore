@@ -1,0 +1,20 @@
+package lendinglibrary.models;
+
+import java.util.Date;
+
+import lendinglibrary.util.BookStatus;
+
+public class Loan {
+
+	private int id;
+	private Customer borrower;
+	private Book bookBorrowed;
+	private Date startDate;
+	private Date dueDate;
+	private BookStatus status;
+	private Date returnDate;
+	
+	
+	
+	
+}

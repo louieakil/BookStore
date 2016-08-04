@@ -28,7 +28,7 @@ public class Customer {
 		this.isValid = true;
 
 		GregorianCalendar gCal = new GregorianCalendar();
-		gCal.add(GregorianCalendar.YEAR, 1);;
+		gCal.add(GregorianCalendar.YEAR, 1);
 		this.expireDate = gCal.getTime();
 		
 	}
