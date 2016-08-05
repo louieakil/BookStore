@@ -1,0 +1,15 @@
+package lendinglibrary.models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BookTest {
+
+	@Test
+	public void testBookEquals() {
+		assertTrue("Books Equal Each Other", book.equals(book2));
+		assertFalse("Not the Same Book", book2.equals(book3));
+	}
+
+}

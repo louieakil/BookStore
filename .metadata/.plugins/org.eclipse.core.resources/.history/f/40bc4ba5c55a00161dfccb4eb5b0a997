@@ -1,0 +1,31 @@
+package lendinglibrary.models.test;
+
+import static org.junit.Assert.*;
+
+import java.util.GregorianCalendar;
+
+import org.junit.Test;
+
+import lendinglibrary.models.Book;
+import lendinglibrary.models.Customer;
+import lendinglibrary.models.Loan;
+import lendinglibrary.util.Gender;
+
+public class LoanTest {
+
+	@Test
+	public void testDueDate() {
+		Book book = new Book(0, "", "","", "", 0);
+		Customer customer = new Customer("", "", "", "", "", "",0, Gender.M);
+		
+		Loan loan = new Loan(0, customer,book);
+		
+		GregorianCalendar gc = new GregorianCalendar();
+		
+		
+		
+		
+		//fail("Not yet implemented");
+	}
+
+}

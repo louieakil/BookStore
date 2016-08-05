@@ -1,0 +1,41 @@
+package lendinglibrary.models.test;
+
+import static org.junit.Assert.*;
+
+
+import java.util.GregorianCalendar;
+
+import org.junit.Test;
+
+import lendinglibrary.models.Book;
+import lendinglibrary.models.Customer;
+import lendinglibrary.models.Loan;
+import lendinglibrary.util.Gender;
+
+public class LoanTest {
+
+	@Test
+	public void testDueDate() {
+		Book book = new Book(0, "", "","", "", 0);
+		Book book2 = new Book(0, "", "","", "", 0);
+		Book book3 = new Book(2, "", "","", "", 0);
+		Customer customer = new Customer("", "", "", "", "", "",0, Gender.M);
+		
+		Loan loan = new Loan(0, customer,book);
+		
+		GregorianCalendar gcExpected = new GregorianCalendar();
+		gcExpected.add(GregorianCalendar.DAY_OF_WEEK_IN_MONTH,2);
+		GregorianCalendar gcActual = new GregorianCalendar();
+		gcActual.setTime(loan.getDueDate());
+		assertEquals(gcExpected.get(GregorianCalendar.YEAR), gcActual.get(GregorianCalendar.YEAR));
+		assertEquals(gcExpected.get(GregorianCalendar.DAY_OF_MONTH), gcActual.get(GregorianCalendar.DAY_OF_MONTH));
+		assertEquals(gcExpected.get(GregorianCalendar.MONTH), gcActual.get(GregorianCalendar.MONTH));
+		
+		assertTrue("Books Equal Each Other", book.equals(book2));
+		assertFalse("Not the Same Book", book2.equals(book3));
+		
+		
+
+	}
+
+}

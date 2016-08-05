@@ -18,7 +18,7 @@ public class Customer {
 	private Date expireDate;
 	
 	
-	public Customer(String title, String firstName, String surname, String address, String phoneNumber, String email, Gender sex){
+	public Customer(String title, String firstName, String surname, String address, String phoneNumber, String email, int customerNumber ,Gender sex){
 		System.out.println("New customer"+ " "+ title + " " + firstName + " "+ "created");
 		setName(title,firstName,surname);
 		this.address = address;
@@ -26,7 +26,7 @@ public class Customer {
 		this.email = email;
 		this.sex = sex;
 		this.isValid = true;
-
+		this.customerNumber = customerNumber;
 		GregorianCalendar gCal = new GregorianCalendar();
 		gCal.add(GregorianCalendar.YEAR, 1);
 		this.expireDate = gCal.getTime();

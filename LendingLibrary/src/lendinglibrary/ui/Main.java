@@ -40,7 +40,7 @@ public class Main {
 			System.out.println("not found book");
 		}
 		
-		Customer customer1 = new Customer("Ms", "Jacskon", "Sorry", "grove street", "7709695122", "mailer@mail.com", Gender.F);
+		Customer customer1 = new Customer("Ms", "Jacskon", "Sorry", "grove street", "7709695122", "mailer@mail.com", 23428,Gender.F);
 
 		System.out.println(dvd1.lend(customer1));
 		dvd1.license();

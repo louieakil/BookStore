@@ -1,0 +1,22 @@
+package lendinglibrary.models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import lendinglibrary.models.Book;
+
+public class LoanTest {
+
+	@Test
+	public void testDueDate() {
+		Book book = new Book(0, "", "","", "", 0);
+		
+		
+		
+		
+		
+		//fail("Not yet implemented");
+	}
+
+}

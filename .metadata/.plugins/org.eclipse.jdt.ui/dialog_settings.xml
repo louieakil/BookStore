@@ -39,7 +39,7 @@
 			<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="-34" key="DIALOG_X_ORIGIN"/>
-			<item value="-11" key="DIALOG_Y_ORIGIN"/>
+			<item value="0" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
 	<section name="NewClassWizardPage">
@@ -59,6 +59,7 @@
 	<section name="SourceActionDialog.constructors">
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="Comments"/>
+		<item value="2" key="InsertPosition.v2"/>
 		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
@@ -98,10 +99,11 @@
 		<item value="false" key="Blocks"/>
 		<item value="false" key="Comments"/>
 		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="LimitElements"/>
+		<item value="2" key="InsertPosition.v2"/>
 		<item value="false" key="InstanceOf"/>
 		<item value="0" key="StringStyle"/>
 		<item value="0" key="ToStringTemplateSelected"/>
-		<item value="false" key="LimitElements"/>
 		<item value="false" key="SkipNull"/>
 		<item value="false" key="FinalModifier"/>
 		<item value="10" key="LimitValue"/>

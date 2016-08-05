@@ -1,0 +1,20 @@
+package lendinglibrary.models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class LoanTest {
+
+	@Test
+	public void testDueDate() {
+		Book book = new Book();
+		
+		
+		
+		
+		
+		//fail("Not yet implemented");
+	}
+
+}

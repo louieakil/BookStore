@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookCatalogTest (1)" project="LendingLibrary" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="lendinglibrary.models.test.BookCatalogTest" time="0.001">
+    <testcase name="testAddABook" classname="lendinglibrary.models.test.BookCatalogTest" time="0.001"/>
+  </testsuite>
+</testrun>

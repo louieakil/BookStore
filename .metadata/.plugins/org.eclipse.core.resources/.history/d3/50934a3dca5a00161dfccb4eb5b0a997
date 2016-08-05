@@ -1,0 +1,17 @@
+package lendinglibrary.models.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BookCatalogTest {
+
+	@Test
+	public void testAddABook() {
+		BookCatalog bc = new BookCatalog();
+		
+		
+		
+	}
+
+}
