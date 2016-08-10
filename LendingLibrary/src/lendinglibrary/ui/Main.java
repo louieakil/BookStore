@@ -30,7 +30,7 @@ public class Main {
 		
 		UI ui = new UI();
 		ui.printHeader();
-		ui.printBookCatalog(bookCatalog.getBookArray());
+		ui.printBookCatalog(bookCatalog.getBookMap());
 		
 		try{
 			Book foundBook = bookCatalog.findBook("I Java");

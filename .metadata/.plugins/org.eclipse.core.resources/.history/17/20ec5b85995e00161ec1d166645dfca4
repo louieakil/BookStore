@@ -1,0 +1,60 @@
+package lendinglibrary.ui;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+
+import lendinglibrary.models.Book;
+
+public class ArrayListTest {
+
+	public static void main(String[] args) {
+		ArrayList<String> myA= new ArrayList<String>();
+		HashSet<String> myH = new HashSet<String>();
+		
+		myH.add("hash 1");
+		myH.add("hash 2");
+		myH.add("hash 3");
+		myA.add("first item");
+		myA.add("Second item");
+		
+		System.out.println(myA.size());
+		myH.remove("hash 1");
+		System.out.println(myH.size());
+		myA.remove(1);
+		myA.add("3rd item");
+		
+		myA.add(0, " 555 element");
+		
+		Iterator<String> myI = myH.iterator();
+		
+		for(int i = 0; i < myA.size(); i++){
+			System.out.println(myA.get(i));
+		}
+		
+		while(myI.hasNext()){
+			String nextString = myI.next();
+			System.out.println(nextString);
+		}
+		
+		HashMap<String,Book> myHM = new HashMap<String,Book>();
+		
+		Book book1 = new Book(1,"title 1", "","","",100);
+		Book book2 = new Book(2,"title 2", "","","",150);
+		
+		myHM.put(book1.getTitle(), book1);
+		myHM.put(book2.getTitle(), book2);
+		
+		System.out.println(myHM.size());
+		
+		myHM.values().iterator();
+		
+		
+		
+		
+		
+
+	}
+
+}

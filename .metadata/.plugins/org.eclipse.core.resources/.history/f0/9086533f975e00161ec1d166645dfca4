@@ -1,0 +1,28 @@
+package lendinglibrary.ui;
+
+import java.util.ArrayList;
+
+public class ArrayListTest {
+
+	public static void main(String[] args) {
+		ArrayList<String> myA= new ArrayList<String>();
+		
+		myA.add("first item");
+		myA.add("Second item");
+		
+		System.out.println(myA.size());
+		
+		myA.remove(1);
+		myA.add("3rd item");
+		
+		myA.add(0, " 555 element");
+		
+		for(int i = 0; i < myA.size(); i++){
+			System.out.println(myA.get(i));
+		}
+		
+
+
+	}
+
+}

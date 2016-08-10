@@ -1,0 +1,17 @@
+package lendinglibrary.ui;
+
+import java.util.ArrayList;
+
+public class ArrayListTest {
+
+	public static void main(String[] args) {
+		ArrayList<String> myA= new ArrayList<String>();
+		
+		myA.add("first item");
+		myA.add("Second item");
+		
+		System.out.println(myA.size());
+
+	}
+
+}

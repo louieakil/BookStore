@@ -1,29 +1,35 @@
 package lendinglibrary.models;
 
+import java.util.HashMap;
+
 public class BookCatalog {
 
-	private Book[] bookArray = new Book[100];
-	private int nextPos = 0;
+	private HashMap<Integer,Book> bookMap;
 	
+	public BookCatalog(){
+		bookMap = new HashMap<Integer,Book>();
+	}
 	
-	public Book[] getBookArray(){
-		return bookArray;
+	public HashMap<Integer,Book> getBookMap(){
+		return bookMap;
 	}
 	
 	public int getNumberofBooks(){
-		return nextPos;
+		return bookMap.size();
 	}
 	
 	public void addBook(Book newBook){
-		bookArray[nextPos] = newBook;
-		nextPos++;
+		bookMap.put(newBook.getID(), newBook);
 	}
 	
 	public Book findBook(String title) throws BookNotFoundException{
 		title = title.trim();
-		for(int i = 0; i < nextPos; i++){
-			if(bookArray[i].getTitle().equalsIgnoreCase(title)){
-				return bookArray[i];
+		
+		for(Book next: bookMap.values())
+		{
+			if(next.getTitle().equalsIgnoreCase(title))
+			{
+				return next;
 			}
 		}
 		throw new BookNotFoundException();

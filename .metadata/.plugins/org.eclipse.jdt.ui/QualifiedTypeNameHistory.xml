@@ -31,16 +31,18 @@
 <fullyQualifiedTypeName name="org.apache.derby.client.am.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.text.NumberFormat"/>
 <fullyQualifiedTypeName name="lendinglibrary.models.DVD"/>
-<fullyQualifiedTypeName name="lendinglibrary.models.Customer"/>
-<fullyQualifiedTypeName name="lendinglibrary.util.Gender"/>
 <fullyQualifiedTypeName name="lendinglibrary.models.BookNotFoundException"/>
 <fullyQualifiedTypeName name="lendinglibrary.util.BookStatus"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="lendinglibrary.models.Loan"/>
 <fullyQualifiedTypeName name="lendinglibrary.models.LoanRegistry"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.Customer"/>
+<fullyQualifiedTypeName name="lendinglibrary.util.Gender"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.Loan"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.BookCatalog"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.Book"/>
 </qualifiedTypeNameHistroy>
