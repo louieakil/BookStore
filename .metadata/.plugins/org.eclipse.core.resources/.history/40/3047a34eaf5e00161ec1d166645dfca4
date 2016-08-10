@@ -1,0 +1,23 @@
+package lendinglibrary.models;
+
+public class CustomerRecords {
+
+	private Customer customer;
+	
+	
+	public CustomerRecords(){
+	/////////////
+	}
+	
+
+	public Customer getCustomer() {
+		return customer;
+	}
+	
+	public void addCustomer(Customer customer){
+		
+	}
+	
+	
+	
+}

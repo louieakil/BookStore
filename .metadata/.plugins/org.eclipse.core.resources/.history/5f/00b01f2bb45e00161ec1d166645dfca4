@@ -1,0 +1,46 @@
+package lendinglibrary.models;
+
+import java.util.HashSet;
+
+public class CustomerRecords {
+
+	private HashSet<Customer> customerCatalog; 
+	
+	public CustomerRecords(){
+		customerCatalog = new HashSet<Customer>();
+	}
+	
+	public void addCustomer(Customer customer) throws CustomerAlreadyExistsException
+	{
+		if(customerCatalog.contains(customer) && customer.equals(null))
+		{
+			throw new CustomerAlreadyExistsException();
+		}
+		
+		customerCatalog.add(customer);
+		System.out.println("Added: "+ customer.getFirstName() + " " + "to customer list");
+		
+	}
+	
+	public Customer findCustomer(String name) throws CustomerNotFoundException
+	{
+		name = name.trim();
+		System.out.println(name);
+		for(Customer customer : customerCatalog)
+		{
+			System.out.println(customer.getFirstName().equalsIgnoreCase(name));
+			if(customer.getFirstName().equalsIgnoreCase(name))
+			{
+				System.out.println(customer.getFirstName());
+				return customer;
+			}
+			
+		}
+		
+		throw new CustomerNotFoundException();
+	}
+	
+	
+	
+	
+}

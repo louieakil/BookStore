@@ -1,16 +1,17 @@
 package lendinglibrary.models;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class BookCatalog {
 
-	private HashMap<Integer,Book> bookMap;
+	private LinkedHashMap<String,Book> bookMap;
 	
 	public BookCatalog(){
-		bookMap = new HashMap<Integer,Book>();
+		bookMap = new LinkedHashMap<String,Book>();
 	}
 	
-	public HashMap<Integer,Book> getBookMap(){
+	public LinkedHashMap<String, Book> getBookMap(){
 		return bookMap;
 	}
 	

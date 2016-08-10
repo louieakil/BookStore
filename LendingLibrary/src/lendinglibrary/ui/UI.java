@@ -1,6 +1,7 @@
 package lendinglibrary.ui;
 import java.text.NumberFormat;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import lendinglibrary.models.Book;
 
@@ -33,12 +34,12 @@ public class UI {
 		}
 	}
 	
-	private String fixlenghthString(int start, int length){
-		String startString = String.valueOf(start);
+	private String fixlenghthString(String string, int length){
+		String startString = String.valueOf(string);
 		return fixLengthString(startString, length);
 	}
 	
-	public void printBookCatalog(HashMap<Integer,Book> bookCatalog){
+	public void printBookCatalog(LinkedHashMap<String,Book> bookCatalog){
 		for(Book next : bookCatalog.values())
 		{
 			printBook(next);

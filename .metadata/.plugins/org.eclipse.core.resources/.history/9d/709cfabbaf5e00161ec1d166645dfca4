@@ -1,0 +1,19 @@
+package lendinglibrary.models;
+
+import java.util.HashSet;
+
+public class CustomerRecords {
+
+	private HashSet<String,Customer> customerCatalog; 
+	
+	public CustomerRecords(){
+		customerCatalog = new HashSet<String,Customer>();
+	}
+	
+	public void addCustomer(Customer customer){
+		
+	}
+	
+	
+	
+}
