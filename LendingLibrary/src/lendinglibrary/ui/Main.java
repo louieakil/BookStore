@@ -2,8 +2,6 @@ package lendinglibrary.ui;
 import java.text.SimpleDateFormat;
 
 import lendinglibrary.models.Book;
-import lendinglibrary.models.BookCatalog;
-import lendinglibrary.models.BookNotFoundException;
 import lendinglibrary.models.Customer;
 import lendinglibrary.models.CustomerAlreadyExistsException;
 import lendinglibrary.models.CustomerNotFoundException;
@@ -12,13 +10,14 @@ import lendinglibrary.models.DVD;
 import lendinglibrary.models.Loan;
 import lendinglibrary.models.LoanAlreadyExistsException;
 import lendinglibrary.models.LoanRegistry;
+import lendinglibrary.models.MaterialCatalog;
 import lendinglibrary.util.Gender;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		BookCatalog bookCatalog = new BookCatalog();
+		MaterialCatalog materialCatalog = new MaterialCatalog();
 		
 		Book book1 = new Book("1232", "Intro to Java", "Matty Ice", "232423", "mableton", 250);
 		Book book2 = new Book("2XXH", "Testing in Java", "Firey Jack", "232423", "douglas", 150);
@@ -27,22 +26,14 @@ public class Main {
 		//book1.relocate("daBlock");
 		
 		
-		bookCatalog.addBook(book1);
-		bookCatalog.addBook(book2);
+		materialCatalog.addMaterial(book1);
+		materialCatalog.addMaterial(book2);
 
 		//System.out.println(dvd1);
 		
 		UI ui = new UI();
 		ui.printHeader();
-		ui.printBookCatalog(bookCatalog.getBookMap());
-		
-		try{
-			Book foundBook = bookCatalog.findBook("I Java");
-			System.out.println(foundBook.getTitle());
-		}
-		catch(BookNotFoundException e){
-			System.out.println("not found book");
-		}
+		ui.printMaterialCatalog(materialCatalog.getMap());
 		
 		Customer customer1 = new Customer("Ms", "Jackson", "Sorry", "grove street", "7709695122", "mailer@mail.com", 23428,Gender.F);
 

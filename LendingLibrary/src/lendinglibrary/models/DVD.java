@@ -35,5 +35,11 @@ public class DVD extends Material{
 		return 7;
 	}
 	
+	@Override
+	public String toString(){
+		return "DVD: " + getID() + " " + getTitle() + " / " + director;
+	}
+
+	
 	
 }

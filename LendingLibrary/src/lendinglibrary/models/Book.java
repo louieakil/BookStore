@@ -36,6 +36,9 @@ public class Book extends Material {
 		return 21;
 	}
 	
-	
+	@Override
+	public String toString(){
+		return "Book: " + getID() + " " + getTitle() + " / " + getAuthor();
+	}
 
 }

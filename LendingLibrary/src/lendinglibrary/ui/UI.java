@@ -2,8 +2,10 @@ package lendinglibrary.ui;
 import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.TreeMap;
 
 import lendinglibrary.models.Book;
+import lendinglibrary.models.Material;
 
 public class UI {
 	
@@ -39,10 +41,10 @@ public class UI {
 		return fixLengthString(startString, length);
 	}
 	
-	public void printBookCatalog(LinkedHashMap<String,Book> bookCatalog){
-		for(Book next : bookCatalog.values())
+	public void printMaterialCatalog(TreeMap<String,Material> materialCatalog){
+		for(Material next : materialCatalog.values())
 		{
-			printBook(next);
+			//printBook(next);
 		}
 	}
 }

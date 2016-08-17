@@ -7,11 +7,6 @@
 <fullyQualifiedTypeName name="models.LoanExists"/>
 <fullyQualifiedTypeName name="models.Loan"/>
 <fullyQualifiedTypeName name="models.BookCatalog"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="models.Customer"/>
 <fullyQualifiedTypeName name="utilities.GenderType"/>
 <fullyQualifiedTypeName name="models.CustomerRecords"/>
@@ -44,5 +39,12 @@
 <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="lendinglibrary.models.BookCatalog"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="lendinglibrary.models.Book"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.CustomerRecords"/>
 </qualifiedTypeNameHistroy>

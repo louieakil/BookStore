@@ -41,7 +41,7 @@ public abstract class Material {
 	
 	@Override
 	public String toString() {
-		return title;
+		return id + " : " + title;
 	}
 	
 	@Override

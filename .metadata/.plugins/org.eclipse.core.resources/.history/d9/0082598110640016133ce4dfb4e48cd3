@@ -1,0 +1,12 @@
+package lendinglibrary.models;
+
+public class TestingStuff {
+
+	public static void main(String[] args) {
+		MaterialCatalog test1 = new MaterialCatalog();
+		
+		Book book1 = new Book("100","An intro to Java","ME","sfse4323","Newnk",100);
+
+	}
+
+}
