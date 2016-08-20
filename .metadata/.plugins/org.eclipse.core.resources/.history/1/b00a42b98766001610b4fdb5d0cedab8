@@ -1,0 +1,36 @@
+package lendinglibrary.ui;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+
+
+public class DataBaseTest {
+	
+	
+	
+	
+	
+
+	public static void main(String[] args) {
+
+		try
+		{
+			Class.forName("org.apache.derby.jdbc.ClientDriver");
+			
+			Connection conn = DriverManager.getConnection("jdbc:derby://localhost/library");
+			
+			Statement stm = conn.createStatement();
+			
+			
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error   " + e);
+		}
+
+	}
+
+}

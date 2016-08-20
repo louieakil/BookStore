@@ -1,0 +1,21 @@
+package lendinglibrary.ui;
+
+public class DataBaseTest {
+	
+	
+	
+	
+	
+
+	public static void main(String[] args) {
+
+		try{
+			Class.forName("org.apache.derby.jdbc.ClientDriver")
+		}
+		catch(Exception e){
+			System.out.println("Error   " + e);
+		}
+
+	}
+
+}
