@@ -13,10 +13,9 @@ public class DataBaseTest {
 	
 	public static void main(String[] args) {
 		RetrieveResultSet("SELECT * from MATERIALS");
-		ChangeData("Update Materials set title = ? where id = ?","A Second Test",1);
-;	}
+	}
 
-	public static void ChangeData(String sql, String title,int id){
+	public static void ChangeData(String sql){
 		Connection conn = null;
 		PreparedStatement stm = null;
 		
@@ -28,10 +27,10 @@ public class DataBaseTest {
 				Class.forName("org.apache.derby.jdbc.ClientDriver");
 				
 				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
-				stm = conn.prepareStatement(sql);
-				stm.setString(1, title);
-				stm.setInt(2, id);
-				int results = stm.executeUpdate();
+				
+				stm = conn.createStatement(String sql, String title,int id );
+				
+				int results = stm.executeUpdate(sql);
 				
 				System.out.println(results);
 				

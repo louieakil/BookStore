@@ -2,7 +2,6 @@ package lendinglibrary.ui;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,13 +11,14 @@ import java.sql.Statement;
 public class DataBaseTest {
 	
 	public static void main(String[] args) {
+		
+		ChangeData("Update Materials set title = 'Test title' where id = 1");
 		RetrieveResultSet("SELECT * from MATERIALS");
-		ChangeData("Update Materials set title = ? where id = ?","A Second Test",1);
-;	}
+	}
 
-	public static void ChangeData(String sql, String title,int id){
+	public static void ChangeData(String sql){
 		Connection conn = null;
-		PreparedStatement stm = null;
+		Statement stm = null;
 		
 		try
 		{
@@ -28,10 +28,10 @@ public class DataBaseTest {
 				Class.forName("org.apache.derby.jdbc.ClientDriver");
 				
 				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
-				stm = conn.prepareStatement(sql);
-				stm.setString(1, title);
-				stm.setInt(2, id);
-				int results = stm.executeUpdate();
+				
+				stm = conn.createStatement();
+				
+				int results = stm.executeUpdate(sql);
 				
 				System.out.println(results);
 				
