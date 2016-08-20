@@ -6,17 +6,17 @@ import org.junit.Test;
 
 import lendinglibrary.models.Book;
 import lendinglibrary.models.Material;
-import lendinglibrary.models.MaterialCatalog;
+import lendinglibrary.models.MaterialCatalogMemoryVersion;
 import lendinglibrary.models.MaterialNotFoundException;
 
 public class MaterialCatalogTest {
 	
 	
-	private MaterialCatalog bc;
+	private MaterialCatalogMemoryVersion bc;
 	private Book book1;
 	
 	public MaterialCatalogTest(){
-		bc = new MaterialCatalog();
+		bc = new MaterialCatalogMemoryVersion();
 		book1 = new Book("1","Learning Stuff","","","",0);
 		bc.addMaterial(book1);
 	}

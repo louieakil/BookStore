@@ -14,7 +14,6 @@
 <fullyQualifiedTypeName name="models.DVD"/>
 <fullyQualifiedTypeName name="models.Material"/>
 <fullyQualifiedTypeName name="models.MaterialCatalog"/>
-<fullyQualifiedTypeName name="java.util.TreeMap"/>
 <fullyQualifiedTypeName name="models.MaterialCatalogInterface"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="org.apache.derby.client.am.Connection"/>
@@ -47,4 +46,8 @@
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="lendinglibrary.models.CustomerRecords"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.MaterialCatalog"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.MaterialNotFoundException"/>
+<fullyQualifiedTypeName name="lendinglibrary.models.Material"/>
 </qualifiedTypeNameHistroy>

@@ -10,18 +10,20 @@ import lendinglibrary.models.DVD;
 import lendinglibrary.models.Loan;
 import lendinglibrary.models.LoanAlreadyExistsException;
 import lendinglibrary.models.LoanRegistry;
-import lendinglibrary.models.MaterialCatalog;
+import lendinglibrary.models.MaterialCatalogInterface;
+import lendinglibrary.models.MaterialCatalogMemoryVersion;
 import lendinglibrary.util.Gender;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		MaterialCatalog materialCatalog = new MaterialCatalog();
+		
+		MaterialCatalogInterface materialCatalog = new MaterialCatalogMemoryVersion();
 		
 		Book book1 = new Book("1232", "Intro to Java", "Matty Ice", "232423", "mableton", 250);
 		Book book2 = new Book("2XXH", "Testing in Java", "Firey Jack", "232423", "douglas", 150);
-		//DVD dvd1 = new DVD("3", "Hot tub Time Machine", "Mabeleton", "Some guy", "9935", 120);
+		DVD dvd1 = new DVD("3", "Hot tub Time Machine", "Mabeleton", "Some guy", "9935", 120);
 		
 		//book1.relocate("daBlock");
 		
@@ -33,7 +35,7 @@ public class Main {
 		
 		UI ui = new UI();
 		ui.printHeader();
-		ui.printMaterialCatalog(materialCatalog.getMap());
+		ui.printMaterialCatalog(materialCatalog.getMaterialMap());
 		
 		Customer customer1 = new Customer("Ms", "Jackson", "Sorry", "grove street", "7709695122", "mailer@mail.com", 23428,Gender.F);
 
