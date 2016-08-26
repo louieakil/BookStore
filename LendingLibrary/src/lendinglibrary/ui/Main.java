@@ -10,6 +10,7 @@ import lendinglibrary.models.DVD;
 import lendinglibrary.models.Loan;
 import lendinglibrary.models.LoanAlreadyExistsException;
 import lendinglibrary.models.LoanRegistry;
+import lendinglibrary.models.MaterialCatalogDB;
 import lendinglibrary.models.MaterialCatalogInterface;
 import lendinglibrary.models.MaterialCatalogMemoryVersion;
 import lendinglibrary.util.Gender;
@@ -19,7 +20,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
-		MaterialCatalogInterface materialCatalog = new MaterialCatalogMemoryVersion();
+		MaterialCatalogInterface materialCatalog = new MaterialCatalogDB();
 		
 		Book book1 = new Book("1232", "Intro to Java", "Matty Ice", "232423", "mableton", 250);
 		Book book2 = new Book("2XXH", "Testing in Java", "Firey Jack", "232423", "douglas", 150);

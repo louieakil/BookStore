@@ -11,13 +11,17 @@ public class DVD extends Material{
 	public DVD(String id, String title, String branch, String director, String catalogNo, int runningTime) {
 		super(id, title, branch);
 		this.director = director;
-		this.catalogNo = catalogNo;
-		this.runningTime = runningTime;
+		this.setCatalogNo(catalogNo);
+		this.setRunningTime(runningTime);
 		this.licensed = false;
 	}
 
 	public void license(){
 		this.licensed = true;
+	}
+
+	public boolean getlicense(){
+		return licensed;
 	}
 	
 	public boolean lend(Customer customer){
@@ -38,6 +42,22 @@ public class DVD extends Material{
 	@Override
 	public String toString(){
 		return "DVD: " + getID() + " " + getTitle() + " / " + director;
+	}
+
+	public String getCatalogNo() {
+		return catalogNo;
+	}
+
+	public void setCatalogNo(String catalogNo) {
+		this.catalogNo = catalogNo;
+	}
+
+	public int getRunningTime() {
+		return runningTime;
+	}
+
+	public void setRunningTime(int runningTime) {
+		this.runningTime = runningTime;
 	}
 
 	

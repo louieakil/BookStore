@@ -1,0 +1,34 @@
+package lendinglibrary.models;
+
+import java.util.TreeMap;
+
+public class MaterialCatalogDB implements MaterialCatalogInterface {
+
+	@Override
+	public void addMaterial(Material newMaterial) {
+		if(newMaterial instanceof Book)
+		{
+			Book newBook = (Book)newMaterial;
+			///do something
+		}
+	}
+
+	@Override
+	public TreeMap<String, Material> getMaterialMap() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Material findMaterial(String title) throws MaterialNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getNumberOfMaterials() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

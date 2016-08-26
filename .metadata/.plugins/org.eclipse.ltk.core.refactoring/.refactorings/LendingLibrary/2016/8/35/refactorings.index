@@ -1,0 +1,4 @@
+1472173955665	Rename type 'MaterialCatalogDatabaseVersion'
+1472175473479	Encapsulate field 'noOfPages'
+1472175691645	Encapsulate field 'catalogNo'
+1472175697858	Encapsulate field 'runningTime'

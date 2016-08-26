@@ -1,0 +1,92 @@
+package lendinglibrary.models;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.TreeMap;
+
+public class MaterialCatalogDB implements MaterialCatalogInterface {
+
+	@Override
+	public void addMaterial(Material newMaterial) {
+		
+		Connection conn = null;
+		PreparedStatement stm = null;
+		
+		try
+		{
+		
+			try
+			{
+				Class.forName("org.apache.derby.jdbc.ClientDriver");			
+				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
+				
+					if(newMaterial instanceof Book)
+					{
+						Book newBook = (Book)newMaterial;
+						
+						String sql = "INSERT INTO materials(barcode,title,author,isbn,branch,numberofpages,type) values(?,?,?,?,?,?,'BOOK')";
+						stm = conn.prepareStatement(sql);
+						stm.setString(1, newBook.getID());
+						stm.setString(2, newBook.getTitle());
+						stm.setString(3, newBook.getAuthor());
+						stm.setString(4, newBook.getIsbn());
+						stm.setInt(5, newBook.getNoOfPages());
+						stm.setString(6, "AnyTown Branch");
+					}
+					else if (newMaterial instanceof DVD)
+					{
+						DVD newDVD = (DVD)newMaterial;
+						String sql = "INSERT INTO materials(barcode,title,catalogNumber,runningtime,licensed,branch,type) values(?,?,?,?,?,?,'DVD')";
+						stm = conn.prepareStatement(sql);
+						stm.setString(1, newDVD.getID());
+						stm.setString(2, newDVD.getTitle());
+						stm.setString(3, newDVD.getCatalogNo());
+						stm.setInt(4, newDVD.getRunningTime());
+						stm.setBoolean(5, newDVD.getlicense());
+						stm.setString(6, "AnyTown Branch");
+					}	
+					//execute prepared statements
+					int results = stm.executeUpdate();
+					System.out.println(results);
+			}
+			finally
+			{
+				if(stm != null){
+					stm.close();
+				}
+				if(conn != null){
+					conn.close();
+				}	
+			}
+		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println("Error   " + e);
+		}
+		catch(SQLException e)
+		{
+			System.out.println("Error   " + e);
+		}
+	}
+
+	@Override
+	public TreeMap<String, Material> getMaterialMap() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Material findMaterial(String title) throws MaterialNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getNumberOfMaterials() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

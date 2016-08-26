@@ -13,8 +13,8 @@ public class DataBaseTest {
 	
 	public static void main(String[] args) {
 		RetrieveResultSet("SELECT * from MATERIALS");
-		ChangeData("Update Materials set title = ? where id = ?","A Second Test",1);
-;	}
+
+		}
 
 	public static void ChangeData(String sql, String title,int id){
 		Connection conn = null;

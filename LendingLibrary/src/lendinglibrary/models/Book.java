@@ -10,7 +10,7 @@ public class Book extends Material {
 		super(bookID, title, branch);
 		this.author = author;
 		this.isbn = isbn;
-		this.noOfPages = noOfPages;
+		this.setNoOfPages(noOfPages);
 	}
 
 
@@ -39,6 +39,16 @@ public class Book extends Material {
 	@Override
 	public String toString(){
 		return "Book: " + getID() + " " + getTitle() + " / " + getAuthor();
+	}
+
+
+	public int getNoOfPages() {
+		return noOfPages;
+	}
+
+
+	public void setNoOfPages(int noOfPages) {
+		this.noOfPages = noOfPages;
 	}
 
 }
