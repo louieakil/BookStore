@@ -1,5 +1,6 @@
 package lendinglibrary.ui;
-import java.text.SimpleDateFormat;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import lendinglibrary.models.Book;
 import lendinglibrary.models.Customer;
@@ -12,11 +13,13 @@ import lendinglibrary.models.LoanAlreadyExistsException;
 import lendinglibrary.models.LoanRegistry;
 import lendinglibrary.models.MaterialCatalogDB;
 import lendinglibrary.models.MaterialCatalogInterface;
-import lendinglibrary.models.MaterialCatalogMemoryVersion;
 import lendinglibrary.util.Gender;
 
 public class Main {
 
+	static Logger logger = LogManager.getLogger();
+	
+	
 	public static void main(String[] args) {
 		
 		
@@ -24,7 +27,7 @@ public class Main {
 		
 		Book book1 = new Book("1232", "Intro to Java", "Matty Ice", "232423", "mableton", 250);
 		Book book2 = new Book("2XXH", "Testing in Java", "Firey Jack", "232423", "douglas", 150);
-		DVD dvd1 = new DVD("3", "Hot tub Time Machine", "Mabeleton", "Some guy", "9935", 120);
+//		DVD dvd1 = new DVD("3", "Hot tub Time Machine", "Mabeleton", "Some guy", "9935", 120);
 		
 		//book1.relocate("daBlock");
 		
@@ -45,11 +48,11 @@ public class Main {
 //		System.out.println(dvd1.lend(customer1));
 //		System.out.println(dvd1.lend(customer1));
 //		System.out.println(dvd1.getLoanPeriod());
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
 		Loan test = new Loan(22, customer1, book1);
-		System.out.println(sdf.format(test.getStartDate()));
-		System.out.println(sdf.format(test.getDueDate()));
+//		System.out.println(sdf.format(test.getStartDate()));
+//		System.out.println(sdf.format(test.getDueDate()));
 		System.out.println(test);
 		
 		LoanRegistry newReg = new LoanRegistry();
@@ -65,7 +68,7 @@ public class Main {
 		System.out.println(newReg.isBookOnLoan(book1.getID()));
 		test.endLoan();
 		System.out.println(newReg.isBookOnLoan(book1.getID()));
-		System.out.println(sdf.format(test.getReturnDate()));
+//		System.out.println(sdf.format(test.getReturnDate()));
 		
 		CustomerRecords cr = new CustomerRecords();
 		
