@@ -11,8 +11,10 @@ import lendinglibrary.models.DVD;
 import lendinglibrary.models.Loan;
 import lendinglibrary.models.LoanAlreadyExistsException;
 import lendinglibrary.models.LoanRegistry;
+import lendinglibrary.models.Material;
 import lendinglibrary.models.MaterialCatalogDB;
 import lendinglibrary.models.MaterialCatalogInterface;
+import lendinglibrary.models.MaterialNotFoundException;
 import lendinglibrary.util.Gender;
 
 public class Main {
@@ -27,15 +29,24 @@ public class Main {
 		
 		Book book1 = new Book("1232", "Intro to Java", "Matty Ice", "232423", "mableton", 250);
 		Book book2 = new Book("2XXH", "Testing in Java", "Firey Jack", "232423", "douglas", 150);
-//		DVD dvd1 = new DVD("3", "Hot tub Time Machine", "Mabeleton", "Some guy", "9935", 120);
+		DVD dvd1 = new DVD("3", "Hot tub Time Machine", "Mabeleton", "Some guy", "9935", 120);
 		
 		//book1.relocate("daBlock");
 		
 		
-		materialCatalog.addMaterial(book1);
-		materialCatalog.addMaterial(book2);
-
-		//System.out.println(dvd1);
+//		materialCatalog.addMaterial(book1);
+//		materialCatalog.addMaterial(book2);
+//		materialCatalog.addMaterial(dvd1);
+		
+		System.out.println(materialCatalog.getNumberOfMaterials());
+		
+		try {
+			Material foundMaterial = materialCatalog.findMaterial("Hot");
+			System.out.println(foundMaterial.getTitle() + " " + foundMaterial.getID());
+			
+		} catch (MaterialNotFoundException e1) {
+			e1.printStackTrace();
+		}
 		
 		UI ui = new UI();
 		ui.printHeader();

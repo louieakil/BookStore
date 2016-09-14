@@ -1,11 +1,11 @@
 package lendinglibrary.models;
 
-import java.util.TreeMap;
+import java.util.Map;
 
 public interface MaterialCatalogInterface {
 
 	public void addMaterial(Material newMaterial);
-	public TreeMap<String,Material> getMaterialMap();
+	public Map<String, Material> getMaterialMap();
 	public Material findMaterial(String title) throws MaterialNotFoundException;
 	public int getNumberOfMaterials();
 	

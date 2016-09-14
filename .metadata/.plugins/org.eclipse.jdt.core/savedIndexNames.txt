@@ -10,8 +10,8 @@ INDEX VERSION 1.127+/Users/lewisscales/source/git-hub-projects/BookStore/.metada
 3145990890.index
 965335243.index
 3975215079.index
-312481032.index
 2034193519.index
+312481032.index
 4082578982.index
 1833648217.index
 2345028593.index
@@ -25,9 +25,9 @@ INDEX VERSION 1.127+/Users/lewisscales/source/git-hub-projects/BookStore/.metada
 1116271856.index
 2714604476.index
 697002508.index
-2777386132.index
-3259763113.index
 156905802.index
+3259763113.index
+2777386132.index
 4033578011.index
 1508914297.index
 3753349145.index

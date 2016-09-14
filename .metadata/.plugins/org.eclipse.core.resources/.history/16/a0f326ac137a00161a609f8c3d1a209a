@@ -1,0 +1,53 @@
+package lendinglibrary.models;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class MaterialCatalogDB implements MaterialCatalogInterface {
+
+	@Override
+	public void addMaterial(Material newMaterial) {
+		
+		PreparedStatement stm = null;
+		
+		if (newMaterial instanceof Book)
+		{
+			Book newBook = (Book)newMaterial;
+			//do sumin
+		}
+		else if(newMaterial instanceof DVD)
+		{
+			DVD newDVD = (DVD)newMaterial;
+			//do sumin
+		}
+		
+		//execute prepared stmnt
+		
+	}
+
+	@Override
+	public Map<String, Material> getMaterialMap() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Material findMaterial(String title) throws MaterialNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getNumberOfMaterials() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+}

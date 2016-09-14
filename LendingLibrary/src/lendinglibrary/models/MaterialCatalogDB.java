@@ -6,16 +6,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class MaterialCatalogDB implements MaterialCatalogInterface {
 
-	
 	public MaterialCatalogDB(){
 		try {
 			Class.forName("org.apache.derby.jdbc.ClientDriver");
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 	
@@ -29,142 +29,137 @@ public class MaterialCatalogDB implements MaterialCatalogInterface {
 		{
 		
 			try
-			{			
-				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
+			{
+				conn = DriverManager.getConnection("jdbc:derby://localhost/library");			
 				
-					if(newMaterial instanceof Book)
-					{
-						Book newBook = (Book)newMaterial;
+				if (newMaterial instanceof Book)
+				{
+					Book newBook = (Book)newMaterial;
 						
-						String sql = "INSERT INTO materials(barcode,title,author,isbn,branch,numberofpages,type) values(?,?,?,?,?,?,'BOOK')";
-						stm = conn.prepareStatement(sql);
-						stm.setString(1, newBook.getID());
-						stm.setString(2, newBook.getTitle());
-						stm.setString(3, newBook.getAuthor());
-						stm.setString(4, newBook.getIsbn());
-						stm.setInt(5, newBook.getNoOfPages());
-						stm.setString(6, "AnyTown Branch");
-					}
-					else if (newMaterial instanceof DVD)
-					{
-						DVD newDVD = (DVD)newMaterial;
-						String sql = "INSERT INTO materials(barcode,title,catalogNumber,runningtime,licensed,branch,type) values(?,?,?,?,?,?,'DVD')";
-						stm = conn.prepareStatement(sql);
-						stm.setString(1, newDVD.getID());
-						stm.setString(2, newDVD.getTitle());
-						stm.setString(3, newDVD.getCatalogNo());
-						stm.setInt(4, newDVD.getRunningTime());
-						stm.setBoolean(5, newDVD.getlicense());
-						stm.setString(6, "AnyTown Branch");
-					}	
-					//execute prepared statements
-					int results = stm.executeUpdate();
-					System.out.println(results);
+					String sql = "insert into materials (barcode,title,author,isbn,numberofpages,branch,type) values(?,?,?,?,?,?,'BOOK')";
+					stm = conn.prepareStatement(sql);
+					stm.setString(1, newBook.getID());
+					stm.setString(2, newBook.getTitle());
+					stm.setString(3, newBook.getAuthor());
+					stm.setString(4, newBook.getIsbn());
+					stm.setInt(5, newBook.getNoOfPages());
+					stm.setString(6, "Compton");						
+				}
+				else if(newMaterial instanceof DVD)
+				{
+					DVD newDVD = (DVD)newMaterial;
+					String sql = "insert into materials (barcode,title,catalognumber,runningtime,LICENCED,branch,type) values(?,?,?,?,?,?,'DVD')";
+					stm = conn.prepareStatement(sql);
+					stm.setString(1, newDVD.getID());
+					stm.setString(2, newDVD.getTitle());
+					stm.setString(3, newDVD.getCatalogNo());
+					stm.setInt(4, newDVD.getRunningTime());
+					stm.setBoolean(5, newDVD.getlicense());
+					stm.setString(6, "Compton");		
+				}
+		
+				int results = stm.executeUpdate();
+				System.out.println("Records added: " + results);
+				
 			}
 			finally
-			{
-				if(stm != null){
+			{	
+				if(stm!=null)
+				{
 					stm.close();
 				}
-				if(conn != null){
+				
+				if(conn!=null)
+				{
 					conn.close();
-				}	
+				}
 			}
 		}
 		catch(SQLException e)
 		{
-			System.out.println("Error   " + e);
+			System.out.println(e);
 		}
+		
 	}
 
 	@Override
-	public TreeMap<String, Material> getMaterialMap() {
-
+	public Map<String, Material> getMaterialMap() {
+			
 		Connection conn = null;
 		Statement stm = null;
 		ResultSet rs = null;
 		
 		try
-		{
+		{		
 			try
 			{
-				
 				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
-				
 				stm = conn.createStatement();
-				
 				rs = stm.executeQuery("select * from materials");
 				
-				TreeMap<String,Material> allMaterials = new TreeMap<String,Material>();
+				Map<String, Material> allMaterials = new LinkedHashMap<String, Material>(); 
 				
 				while(rs.next())
 				{
 					String materialType = rs.getString("type");
-					if(materialType.equals("BOOK"))
+					if(materialType.equalsIgnoreCase("BOOK"))
 					{
-						Book newBook = new Book(rs.getString("barcode"), rs.getString("title"), rs.getString("author"), rs.getString("isbn"), rs.getString("branch"), rs.getInt("numberofpages"));
+						Book newBook = new Book(rs.getString("barcode"),rs.getString("title"),rs.getString("author"),rs.getString("isbn"),rs.getString("branch"),rs.getInt("numberofPages"));
 						allMaterials.put(rs.getString("barcode"), newBook);
 					}
 					else if(materialType.equals("DVD"))
 					{
-						DVD newDVD = new DVD(rs.getString("barcode"), rs.getString("title"), rs.getString("branch"), rs.getString("director"), rs.getString("catalogNumber"), rs.getInt("runningtime"));
-						allMaterials.put(rs.getString("barcode"), newDVD);
+						DVD newDvd = new DVD(rs.getString("barcode"),rs.getString("title"),rs.getString("branch"),rs.getString("director"),rs.getString("catalognumber"),rs.getInt("runningtime"));
+						allMaterials.put(rs.getString("barcode"), newDvd);
 					}
-				}
+				}	
 				return allMaterials;
-				
 			}
 			finally
-			{
-				if(rs != null){
-					rs.close();					
-				}
-				if(stm != null){
+			{	
+				if(stm!=null)
+				{
 					stm.close();
 				}
-				if(conn != null){
+				
+				if(conn!=null)
+				{
 					conn.close();
 				}
 			}
 		}
 		catch(SQLException e)
 		{
-			System.out.println("Error   " + e);
-		}
-
-		return null;
-	
+			throw new RuntimeException(e);
+		}	
 	}
 
 	@Override
-	public Material findMaterial(String title) throws MaterialNotFoundException {
-
+	public Material findMaterial(String title) throws MaterialNotFoundException {	
+		
 		Connection conn = null;
 		Statement stm = null;
 		ResultSet rs = null;
 		
 		try
-		{
+		{		
 			try
 			{
-				
 				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
-				
 				stm = conn.createStatement();
-				
 				rs = stm.executeQuery("select * from materials where title like '%" + title + "%'");
 				if(rs.next())
 				{
 					String materialType = rs.getString("type");
-					if(materialType.equals("BOOK"))
+					if(materialType.equalsIgnoreCase("BOOK"))
 					{
-						Book newBook = new Book(rs.getString("barcode"), rs.getString("title"), rs.getString("author"), rs.getString("isbn"), rs.getString("branch"), rs.getInt("numberofpages"));
+						Book newBook = new Book(rs.getString("barcode"),rs.getString("title"),rs.getString("author"),rs.getString("isbn"),rs.getString("branch"),rs.getInt("numberofPages"));
 						return newBook;
 					}
 					else if(materialType.equals("DVD"))
 					{
-						DVD newDVD = new DVD(rs.getString("barcode"), rs.getString("title"), rs.getString("branch"), rs.getString("director"), rs.getString("catalogNumber"), rs.getInt("runningtime"));
-						return newDVD;
+						DVD newDvd = new DVD(rs.getString("barcode"),rs.getString("title"),rs.getString("branch"),rs.getString("director"),rs.getString("catalognumber"),rs.getInt("runningtime"));
+						return newDvd;
 					}
 					else
 					{
@@ -175,68 +170,63 @@ public class MaterialCatalogDB implements MaterialCatalogInterface {
 				{
 					throw new MaterialNotFoundException();
 				}
-				
 			}
 			finally
-			{
-				if(rs != null){
-					rs.close();					
-				}
-				if(stm != null){
+			{	
+				if(stm!=null)
+				{
 					stm.close();
 				}
-				if(conn != null){
+				
+				if(conn!=null)
+				{
 					conn.close();
 				}
 			}
 		}
 		catch(SQLException e)
 		{
-			System.out.println("Error   " + e);
-		}
-
-		return null;
-	
+			throw new RuntimeException(e);
+		}	
 	}
 
 	@Override
 	public int getNumberOfMaterials() {
-
+		
 		Connection conn = null;
 		Statement stm = null;
 		ResultSet rs = null;
 		
 		try
 		{
+		
 			try
-			{	
+			{
 				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
-				
 				stm = conn.createStatement();
-				
 				rs = stm.executeQuery("select count(id) from materials");
 				rs.next();
-				return rs.getInt(1);
+				return rs.getInt(1);		
 			}
 			finally
-			{
-				if(rs != null){
-					rs.close();					
-				}
-				if(stm != null){
+			{	
+				if(stm!=null)
+				{
 					stm.close();
 				}
-				if(conn != null){
+				
+				if(conn!=null)
+				{
 					conn.close();
 				}
 			}
 		}
 		catch(SQLException e)
 		{
-			System.out.println("Error   " + e);
+			throw new RuntimeException(e);
 		}
-
-		return 0;
+		
 	}
+
 
 }

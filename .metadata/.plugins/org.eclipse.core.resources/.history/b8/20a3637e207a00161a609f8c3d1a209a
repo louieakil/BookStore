@@ -1,0 +1,176 @@
+package lendinglibrary.models;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Map;
+
+public class MaterialCatalogDB implements MaterialCatalogInterface {
+
+	@Override
+	public void addMaterial(Material newMaterial) {
+		
+		Connection conn = null;
+		PreparedStatement stm = null;
+		
+		try
+		{
+		
+			try
+			{
+				Class.forName("org.apache.derby.jdbc.ClientDriver");
+				conn = DriverManager.getConnection("jdbc:derby://localhost/library");			
+				
+				if (newMaterial instanceof Book)
+				{
+					Book newBook = (Book)newMaterial;
+						
+					String sql = "insert into materials (barcode,title,author,isbn,numberofpages,branch,type) values(?,?,?,?,?,?,'BOOK')";
+					stm = conn.prepareStatement(sql);
+					stm.setString(1, newBook.getID());
+					stm.setString(2, newBook.getTitle());
+					stm.setString(3, newBook.getAuthor());
+					stm.setString(4, newBook.getIsbn());
+					stm.setInt(5, newBook.getNoOfPages());
+					stm.setString(6, "Compton");						
+				}
+				else if(newMaterial instanceof DVD)
+				{
+					DVD newDVD = (DVD)newMaterial;
+					String sql = "insert into materials (barcode,title,catalognumber,runningtime,LICENCED,branch,type) values(?,?,?,?,?,?,'DVD')";
+					stm = conn.prepareStatement(sql);
+					stm.setString(1, newDVD.getID());
+					stm.setString(2, newDVD.getTitle());
+					stm.setString(3, newDVD.getCatalogNo());
+					stm.setInt(4, newDVD.getRunningTime());
+					stm.setBoolean(5, newDVD.getlicense());
+					stm.setString(6, "Compton");		
+				}
+		
+				int results = stm.executeUpdate();
+				System.out.println("Records added: " + results);
+				
+			}
+			finally
+			{	
+				if(stm!=null)
+				{
+					stm.close();
+				}
+				
+				if(conn!=null)
+				{
+					conn.close();
+				}
+			}
+		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println(e);
+		}
+		catch(SQLException e)
+		{
+			System.out.println(e);
+		}
+		
+	}
+
+	@Override
+	public Map<String, Material> getMaterialMap() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Material findMaterial(String title) throws MaterialNotFoundException {
+
+		
+		Connection conn = null;
+		Statement stm = null;
+		ResultSet rs = null;
+		
+		try
+		{
+		
+			try
+			{
+				Class.forName("org.apache.derby.jdbc.ClientDriver");
+				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
+				stm = conn.createStatement();
+				rs = stm.executeQuery("select count(id) from materials");
+				rs.next();
+				return rs.getInt(1);		
+			}
+			finally
+			{	
+				if(stm!=null)
+				{
+					stm.close();
+				}
+				
+				if(conn!=null)
+				{
+					conn.close();
+				}
+			}
+		}
+		catch(ClassNotFoundException e)
+		{
+			throw new RuntimeException(e);
+		}
+		catch(SQLException e)
+		{
+			throw new RuntimeException(e);
+		}
+		
+	
+	}
+
+	@Override
+	public int getNumberOfMaterials() {
+		
+		Connection conn = null;
+		Statement stm = null;
+		ResultSet rs = null;
+		
+		try
+		{
+		
+			try
+			{
+				Class.forName("org.apache.derby.jdbc.ClientDriver");
+				conn = DriverManager.getConnection("jdbc:derby://localhost/library");
+				stm = conn.createStatement();
+				rs = stm.executeQuery("select count(id) from materials");
+				rs.next();
+				return rs.getInt(1);		
+			}
+			finally
+			{	
+				if(stm!=null)
+				{
+					stm.close();
+				}
+				
+				if(conn!=null)
+				{
+					conn.close();
+				}
+			}
+		}
+		catch(ClassNotFoundException e)
+		{
+			throw new RuntimeException(e);
+		}
+		catch(SQLException e)
+		{
+			throw new RuntimeException(e);
+		}
+		
+	}
+
+
+}
